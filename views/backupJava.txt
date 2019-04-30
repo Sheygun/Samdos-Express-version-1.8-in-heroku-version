@@ -1,0 +1,464 @@
+let clickme = document.getElementById('clickme');
+
+clickme.onclick = function(){
+    let selectItem = document.getElementById('selectObj').value;
+    if(selectItem != "faculty"){
+        document.getElementById('selectObj2').style.visibility = "visible";
+        if(selectItem == "science"){
+           document.getElementById('checkName').innerHTML = "Check Department";
+           let selectDept = document.getElementById('selectObj2').value;
+
+            document.getElementById('one').innerHTML = "Computer Science";
+                let valueOne = document.getElementById('one').value = "computer";
+
+                    if(selectDept == valueOne){
+                        document.getElementById('selectObj3').style.visibility = "visible";
+                        document.getElementById('checkName').innerHTML = "Select Level";
+                            let selectLevel = document.getElementById('selectObj3').value;
+
+                            if(selectLevel == "100"){
+                                document.getElementById('selectObj4').style.visibility = "visible";
+                                 document.getElementById('checkName').innerHTML = "Check Course";
+                                 let selectCourse = document.getElementById('selectObj4').value;
+
+                                    document.getElementById('course1').innerHTML = "CSC101";
+                                    let course1 = document.getElementById('course1').value = "csc101";
+
+                                    if(selectCourse == course1){
+                                        window.location.replace('/pq');
+                                    }
+
+                                    document.getElementById('course2').innerHTML = "CSC101";
+                                    document.getElementById('course3').innerHTML = "CSC102";
+                                    document.getElementById('course4').innerHTML = "CSC103";
+                                    document.getElementById('course5').innerHTML = "CSC104";
+                                    document.getElementById('course6').innerHTML = "CSC105";
+                                    document.getElementById('course7').innerHTML = "CSC106";
+                                    document.getElementById('course8').innerHTML = "CSC107";
+                                    document.getElementById('course9').innerHTML = "CSC108";
+                                    document.getElementById('course10').innerHTML = "CSC109";
+                                    document.getElementById('course11').innerHTML = "CSC111";
+                                    document.getElementById('course12').innerHTML = "CSC120";
+
+
+                            }else{
+                                document.getElementById('selectObj4').style.visibility = "hidden";
+                                 document.getElementById('checkName').innerHTML = "Select Level";
+                            }
+                    }else {
+                        document.getElementById('selectObj3').style.visibility = "hidden";
+                        document.getElementById('selectObj4').style.visibility = "hidden";
+                        document.getElementById('checkName').innerHTML = "Check Department";
+                    }
+
+
+            document.getElementById('two').innerHTML = "Mathematics";
+            document.getElementById('three').innerHTML = "Biochemistry";
+            document.getElementById('four').innerHTML = "Physics";
+            document.getElementById('five').innerHTML = "Zoology";
+            document.getElementById('six').innerHTML = "Botany";
+            document.getElementById('seven').innerHTML = "Fishery";
+            document.getElementById('eight').innerHTML = "Microbiology";
+            document.getElementById('nine').innerHTML = "Chemistry";
+
+
+
+        }else if(selectItem == "art"){
+            document.getElementById('checkName').innerHTML = "Check Department";
+
+            document.getElementById('one').innerHTML = "Music and Art";
+            document.getElementById('two').innerHTML = "English Language";
+            document.getElementById('three').innerHTML = "Foreign Language";
+            document.getElementById('four').innerHTML = "Philisopy";
+            document.getElementById('five').innerHTML = "Religion";
+            document.getElementById('six').innerHTML = "History";
+            var child = document.getElementById("seven"); child.parentNode.removeChild(child);
+            var child2 = document.getElementById("eight"); child2.parentNode.removeChild(child2);
+            var child3 = document.getElementById("nine"); child3.parentNode.removeChild(child3);
+        }
+    }else {
+        document.getElementById('selectObj4').style.visibility ="hidden";
+        document.getElementById('selectObj3').style.visibility ="hidden";
+        document.getElementById('selectObj2').style.visibility ="hidden";
+        document.getElementById('checkName').innerHTML = "Check Faculty";
+    }
+}
+
+
+ <select class="browser-default custom-select" id="tope">
+                    <option selected>Open this select menu</option>
+                    <option value="ade" id="first">One</option>
+                    <option value="ade2" id="second">Two</option>
+                    <option value="ade3" id="third">Three</option>
+                  </select>
+
+                  <select class="mdb-select md-form" disabled id="sheygun">
+                    <option value="0" selected>Choose your option</option>
+                    <option value="1" id="one"></option>
+                    <option value="2" id="two"></option>
+                    <option value="3" id="three"></option>
+                  </select>
+
+let tope = document.getElementById('tope');
+let sheygun = document.getElementById('sheygun');
+tope.onchange = function(){
+    if(tope.value == "ade"){
+        sheygun.disabled = false;
+        sheygun.options[1].innerHTML = 'tope';
+        sheygun.options[2].innerHTML = 'tope2';
+        sheygun.options[3].innerHTML = 'tope3';
+    } else  if(tope.value == "ade2"){
+        sheygun.disabled = false;
+        sheygun.options[1].innerHTML = 'tope4';
+        sheygun.options[2].innerHTML = 'tope5';
+        sheygun.options[3].innerHTML = 'tope6';
+    } else  if(tope.value == "ade3"){
+        sheygun.disabled = false;
+        sheygun.options[1].innerHTML = 'tope7';
+        sheygun.options[2].innerHTML = 'tope8';
+        sheygun.options[3].innerHTML = 'tope9';
+    }
+    else{
+        sheygun.disabled = true;
+    }
+}
+
+
+
+
+let clickme = document.getElementById('clickme');
+
+clickme.onclick = function(){
+    let selectItem = document.getElementById('selectObj').value;
+    if(selectItem != "faculty"){
+        document.getElementById('selectObj2').style.visibility = "visible";
+        if(selectItem == "science"){
+           document.getElementById('checkName').innerHTML = "Check Department";
+           let selectDept = document.getElementById('selectObj2').value;
+
+        //    ============================== computer science ===================================
+
+            document.getElementById('one').innerHTML = "Computer Science";
+                let valueOne = document.getElementById('one').value = "computer";
+             document.getElementById('two').innerHTML = "Mathematics";
+                let valueTwo = document.getElementById('two').value = "maths";
+            document.getElementById('three').innerHTML = "Biochemistry";
+                let valueThree = document.getElementById('three').value = "bch";
+            document.getElementById('four').innerHTML = "Physics";
+                let valueFour = document.getElementById('four').value = "phy";
+            document.getElementById('five').innerHTML = "Zoology";
+                let valueFive = document.getElementById('five').value = "zoo";
+            document.getElementById('six').innerHTML = "Botany";
+                let valueSix = document.getElementById('six').value = "bot";
+            document.getElementById('seven').innerHTML = "Fishery";
+                let valueSeven = document.getElementById('seven').value = "fish";
+            document.getElementById('eight').innerHTML = "Microbiology";
+                let valueEight = document.getElementById('eight').value = "mcb";
+            document.getElementById('nine').innerHTML = "Chemistry";
+                let valueNine = document.getElementById('nine').value = "chm";
+
+
+
+                    if(selectDept == valueOne){
+                        document.getElementById('selectObj3').style.visibility = "visible";
+                        document.getElementById('checkName').innerHTML = "Select Level";
+                            let selectLevel = document.getElementById('selectObj3').value;
+
+                            if(selectLevel == "100"){
+                                 window.location.replace('/csclevel1');
+
+                            }else if(selectLevel == "200"){
+                                window.location.replace('/csclevel2');
+                            }
+                            else if(selectLevel == "300"){
+                                window.location.replace('/csclevel3');
+                            }
+                            else if(selectLevel == "400"){
+                                window.location.replace('/csclevel4');
+                            }
+                            else if(selectLevel == "500"){
+                                window.location.replace('/csclevel5');
+                            }
+                            else if(selectLevel == "others"){
+                                window.location.replace('/others');
+                            }
+                            else{
+                                 document.getElementById('checkName').innerHTML = "Select Level";
+                            }
+                    }
+// ================================================ maths ========================================
+                    else if(selectDept == valueTwo){
+                        document.getElementById('selectObj3').style.visibility = "visible";
+                        document.getElementById('checkName').innerHTML = "Select Level";
+                            let selectLevel = document.getElementById('selectObj3').value;
+
+                            if(selectLevel == "100"){
+                                 window.location.replace('/matlevel1');
+
+                            }else if(selectLevel == "200"){
+                                window.location.replace('/matlevel2');
+                            }
+                            else if(selectLevel == "300"){
+                                window.location.replace('/matlevel3');
+                            }
+                            else if(selectLevel == "400"){
+                                window.location.replace('/matlevel4');
+                            }
+                            else if(selectLevel == "500"){
+                                window.location.replace('/matlevel5');
+                            }
+                            else if(selectLevel == "others"){
+                                window.location.replace('/');
+                            }
+                            else{
+                                 document.getElementById('checkName').innerHTML = "Select Level";
+                            }
+                    }
+                    // ================================================= Biochemistry =====================================
+
+                    else if(selectDept == valueThree){
+                        document.getElementById('selectObj3').style.visibility = "visible";
+                        document.getElementById('checkName').innerHTML = "Select Level";
+                            let selectLevel = document.getElementById('selectObj3').value;
+
+                            if(selectLevel == "100"){
+                                 window.location.replace('/bchlevel1');
+
+                            }else if(selectLevel == "200"){
+                                window.location.replace('/bchlevel2');
+                            }
+                            else if(selectLevel == "300"){
+                                window.location.replace('/bchlevel3');
+                            }
+                            else if(selectLevel == "400"){
+                                window.location.replace('/bchlevel4');
+                            }
+                            else if(selectLevel == "500"){
+                                window.location.replace('/bchlevel5');
+                            }
+                            else if(selectLevel == "others"){
+                                window.location.replace('/pq');
+                            }
+                            else{
+                                 document.getElementById('checkName').innerHTML = "Select Level";
+                            }
+                    }
+
+    // ================================================= Physics =====================================
+                     else if(selectDept == valueFour){
+                        document.getElementById('selectObj3').style.visibility = "visible";
+                        document.getElementById('checkName').innerHTML = "Select Level";
+                            let selectLevel = document.getElementById('selectObj3').value;
+
+                            if(selectLevel == "100"){
+                                 window.location.replace('/phylevel1');
+
+                            }else if(selectLevel == "200"){
+                                window.location.replace('/phylevel2');
+                            }
+                            else if(selectLevel == "300"){
+                                window.location.replace('/phylevel3');
+                            }
+                            else if(selectLevel == "400"){
+                                window.location.replace('/phylevel4');
+                            }
+                            else if(selectLevel == "500"){
+                                window.location.replace('/phylevel5');
+                            }
+                            else if(selectLevel == "others"){
+                                window.location.replace('/');
+                            }
+                            else{
+                                 document.getElementById('checkName').innerHTML = "Select Level";
+                            }
+                    }
+
+                     // ================================================= zoology =====================================
+                     else if(selectDept == valueFive){
+                        document.getElementById('selectObj3').style.visibility = "visible";
+                        document.getElementById('checkName').innerHTML = "Select Level";
+                            let selectLevel = document.getElementById('selectObj3').value;
+
+                            if(selectLevel == "100"){
+                                 window.location.replace('/zoolevel1');
+
+                            }else if(selectLevel == "200"){
+                                window.location.replace('/zoolevel2');
+                            }
+                            else if(selectLevel == "300"){
+                                window.location.replace('/zoolevel3');
+                            }
+                            else if(selectLevel == "400"){
+                                window.location.replace('/zoolevel4');
+                            }
+                            else if(selectLevel == "500"){
+                                window.location.replace('/zoolevel5');
+                            }
+                            else if(selectLevel == "others"){
+                                window.location.replace('/');
+                            }
+                            else{
+                                 document.getElementById('checkName').innerHTML = "Select Level";
+                            }
+                    }
+
+                 // ================================================= Botany =====================================
+                 else if(selectDept == valueSix){
+                    document.getElementById('selectObj3').style.visibility = "visible";
+                    document.getElementById('checkName').innerHTML = "Select Level";
+                        let selectLevel = document.getElementById('selectObj3').value;
+
+                        if(selectLevel == "100"){
+                             window.location.replace('/botlevel1');
+
+                        }else if(selectLevel == "200"){
+                            window.location.replace('/botlevel2');
+                        }
+                        else if(selectLevel == "300"){
+                            window.location.replace('/botlevel3');
+                        }
+                        else if(selectLevel == "400"){
+                            window.location.replace('/botlevel4');
+                        }
+                        else if(selectLevel == "500"){
+                            window.location.replace('/botlevel5');
+                        }
+                        else if(selectLevel == "others"){
+                            window.location.replace('/');
+                        }
+                        else{
+                             document.getElementById('checkName').innerHTML = "Select Level";
+                        }
+                }
+
+                 // ================================================= Fishery =====================================
+                 else if(selectDept == valueSeven){
+                    document.getElementById('selectObj3').style.visibility = "visible";
+                    document.getElementById('checkName').innerHTML = "Select Level";
+                        let selectLevel = document.getElementById('selectObj3').value;
+
+                        if(selectLevel == "100"){
+                             window.location.replace('/fislevel1');
+
+                        }else if(selectLevel == "200"){
+                            window.location.replace('/fislevel2');
+                        }
+                        else if(selectLevel == "300"){
+                            window.location.replace('/fislevel3');
+                        }
+                        else if(selectLevel == "400"){
+                            window.location.replace('/fislevel4');
+                        }
+                        else if(selectLevel == "500"){
+                            window.location.replace('/fislevel5');
+                        }
+                        else if(selectLevel == "others"){
+                            window.location.replace('/');
+                        }
+                        else{
+                             document.getElementById('checkName').innerHTML = "Select Level";
+                        }
+                }
+             // ================================================= MicroBiology =====================================
+             else if(selectDept == valueEight){
+                document.getElementById('selectObj3').style.visibility = "visible";
+                document.getElementById('checkName').innerHTML = "Select Level";
+                    let selectLevel = document.getElementById('selectObj3').value;
+
+                    if(selectLevel == "100"){
+                         window.location.replace('/mcblevel1');
+
+                    }else if(selectLevel == "200"){
+                        window.location.replace('/mcblevel2');
+                    }
+                    else if(selectLevel == "300"){
+                        window.location.replace('/mcblevel3');
+                    }
+                    else if(selectLevel == "400"){
+                        window.location.replace('/mcblevel4');
+                    }
+                    else if(selectLevel == "500"){
+                        window.location.replace('/mcblevel5');
+                    }
+                    else if(selectLevel == "others"){
+                        window.location.replace('/');
+                    }
+                    else{
+                         document.getElementById('checkName').innerHTML = "Select Level";
+                    }
+            }
+
+                 // ================================================= Chemistry =====================================
+                 else if(selectDept == valueNine){
+                    document.getElementById('selectObj3').style.visibility = "visible";
+                    document.getElementById('checkName').innerHTML = "Select Level";
+                        let selectLevel = document.getElementById('selectObj3').value;
+
+                        if(selectLevel == "100"){
+                             window.location.replace('/chmlevel1');
+
+                        }else if(selectLevel == "200"){
+                            window.location.replace('/chmlevel2');
+                        }
+                        else if(selectLevel == "300"){
+                            window.location.replace('/chmlevel3');
+                        }
+                        else if(selectLevel == "400"){
+                            window.location.replace('/chmlevel4');
+                        }
+                        else if(selectLevel == "500"){
+                            window.location.replace('/chmlevel5');
+                        }
+                        else if(selectLevel == "others"){
+                            window.location.replace('/');
+                        }
+                        else{
+                             document.getElementById('checkName').innerHTML = "Select Level";
+                        }
+                }
+
+// ================================================= End =====================================
+                    else {
+                        document.getElementById('selectObj3').style.visibility = "hidden";
+                        document.getElementById('checkName').innerHTML = "Check Department";
+                    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            // ================================================= Biochemistry =====================================
+
+
+
+
+
+        }else if(selectItem == "art"){
+            document.getElementById('checkName').innerHTML = "Check Department";
+
+            document.getElementById('one').innerHTML = "Music and Art";
+            document.getElementById('two').innerHTML = "English Language";
+            document.getElementById('three').innerHTML = "Foreign Language";
+            document.getElementById('four').innerHTML = "Philisopy";
+            document.getElementById('five').innerHTML = "Religion";
+            document.getElementById('six').innerHTML = "History";
+            var child = document.getElementById("seven"); child.parentNode.removeChild(child);
+            var child2 = document.getElementById("eight"); child2.parentNode.removeChild(child2);
+            var child3 = document.getElementById("nine"); child3.parentNode.removeChild(child3);
+        }
+    }else {
+        document.getElementById('selectObj3').style.visibility ="hidden";
+        document.getElementById('selectObj2').style.visibility ="hidden";
+        document.getElementById('checkName').innerHTML = "Check Faculty";
+    }
+}
