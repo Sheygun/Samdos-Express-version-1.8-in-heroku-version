@@ -4,7 +4,12 @@ body{
     /* margin: 0%; */
     /* padding: 0%; */
 }
-
+.my_p{
+    letter-spacing: 2px; line-height: 30px;
+}
+.about-border{
+    border-right: 1px solid black;
+}
 .mytable{
     font-size: 20px;
 }.myselect{
@@ -29,11 +34,7 @@ option{
     font-weight: bold;
     margin: 30px 50px;
 }
-@media screen and (max-width: 868px) {
-    .document{
-        height: 450px;
-    }
-  }
+
 
 
   /*-- bottom-to-top --*/
@@ -63,4 +64,12 @@ option{
     -moz-opacity: 0;
     filter: alpha(opacity=0);
 }
-/*-- //bottom-to-top --*/
+
+@media screen and (max-width: 868px) {
+    .document{
+        height: 450px;
+    }
+    .about-border{
+        border: none;
+    }
+  }

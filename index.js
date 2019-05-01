@@ -27,10 +27,24 @@ express()
   .get('/solution', function(req, res) {
     res.render('solution', { title: 'Express' })
   })
-
+// =================================== others folder =================================
   .get('/test260219', function(req, res) {
     res.render('others/toyintest260219', { title: 'Express' })
   })
+
+  .get('/contact', function(req, res) {
+    res.render('others/contact', { title: 'Express' })
+  })
+
+  .get('/advertise', function(req, res) {
+    res.render('others/advertise', { title: 'Express' })
+  })
+
+  .get('/terms', function(req, res) {
+    res.render('others/terms', { title: 'Express' })
+  })
+
+
   // =============================== Computer Science ===========================
   .get('/csclevel1', function(req, res, next) {
     res.render('pastquestions/science/computer/100level', {})
