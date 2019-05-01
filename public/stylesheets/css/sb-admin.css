@@ -131,18 +131,18 @@ ul.alert-dropdown {
     }
 }
 
-.side-nav>li>ul {
+.side-nav>li>div>ul {
     padding: 0;
 }
 
-.side-nav>li>ul>li>a {
+.side-nav>li>div>ul>li>a {
     display: block;
     padding: 10px 15px 10px 38px;
     text-decoration: none;
     color: #999;
 }
 
-.side-nav>li>ul>li>a:hover {
+.side-nav>li>div>ul>li>a:hover {
     color: #fff;
 }
 

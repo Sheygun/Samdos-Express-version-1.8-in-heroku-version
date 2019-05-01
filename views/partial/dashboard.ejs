@@ -1,192 +1,234 @@
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        <h1 onclick="window.location.href='/'" style="margin:15px 20px; font-size: 20px; cursor: pointer;" class="white-text font-weight-bold h4">SAMD<i class="fa fa-circle"></i>S</h1>
-    </div>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <h1 onclick="window.location.href='/'" style="margin:15px 20px; font-size: 20px; cursor: pointer;" class="white-text font-weight-bold h4">SAMD<i class="fa fa-circle"></i>S</h1>
+        </div>
 
 
-<!-- =================================================================== message profile and notification ==================================================== -->
+    <!-- =================================================================== message profile and notification ==================================================== -->
 
-<ul class="nav navbar-right top-nav">
-        <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> <b class="caret"></b></a>
+    <ul class="nav navbar-right top-nav">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> <b class="caret"></b></a>
 
-            <ul class="dropdown-menu message-dropdown">
-                <!-- <li class="message-preview">
-                    <a href="#">
-                        <div class="media">
-                            <span class="pull-left">
-                                <img class="media-object"  alt="">
-                            </span>
-                            <div class="media-body">
-                                <h5 class="media-heading"><strong>John Smith</strong>
-                                </h5>
-                                <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                <ul class="dropdown-menu message-dropdown">
+
+
+                    <li class="message-preview">
+                        <a href="#">
+                            <div class="media">
+                                <span class="pull-left">
+                                    <img class="media-object" alt="">
+                                </span>
+                                <div class="media-body">
+                                    <h5 class="media-heading"><strong>Olabayo Segun Emmanuel</strong> <br> <span class="small"> Asst. CEO </span>
+                                    </h5>
+                                    <p class="small text-muted"><i class="fa fa-clock-o"></i> May 26 at 4:32 PM</p>
+                                    <p>I'm pleased to welcome you to this wonderful platform, do have a nice time in here. We at SAMDOS wishes you success in all your endeavors. <br> <br> Best Regards. </p>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                </li> -->
-
-                <li class="message-preview">
-                    <a href="#">
-                        <div class="media">
-                            <span class="pull-left">
-                                <img class="media-object" alt="">
-                            </span>
-                            <div class="media-body">
-                                <h5 class="media-heading"><strong>Olabayo Segun Emmanuel</strong> <br> <span class="small"> Asst. CEO </span>
-                                </h5>
-                                <p class="small text-muted"><i class="fa fa-clock-o"></i> May 26 at 4:32 PM</p>
-                                <p>I'm pleased to welcome you to this wonderful platform, do have a nice time in here. We at SAMDOS wishes you success in all your endeavors. <br> <br> Best Regards. </p>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <!-- <li class="message-footer">
-                    <a href="#">Read All New Messages</a>
-                </li> -->
-            </ul>
-        </li>
-
-
-        <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>
-            <ul class="dropdown-menu alert-dropdown">
-                <li>
-                    <a href="#">Alert Name <span class="label label-default">new</span></a>
-                    <p class="small text-muted" style="margin:0px 10px;">
-                        For any Complain, suggestion or Sponsorship, kindly contact the admin email below <br><br>sheygun@aol.com
-                    </p>
-                </li>
-
-                <li class="divider"></li>
-                <!-- <li>
-                    <a href="#">View All</a>
-                </li> -->
-            </ul>
-        </li>
-
-        <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdowns"><i class="fa fa-user"></i> Guest <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-                <li>
-                    <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
-                </li>
-                <li class="divider"></li>
-                <li>
-                    <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
-                </li>
-            </ul>
-        </li>
-    </ul>
-
-<!-- ================================================ side bar ============================================================================ -->
-
-
-<div class="collapse navbar-collapse navbar-ex1-collapse">
-        <ul class="nav navbar-nav side-nav">
-            <li class="">
-                <a href="/"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
-            </li>
-            <!-- <li>
-                <a href="/timetable"><i class="fa fa-fw fa-table"></i> Timetable</a>
-            </li> -->
-            <li>
-                <a data-toggle="modal" data-target="#modalLoginForm"><i class="fa fa-fw fa-image"></i> Past Questions</a>
-            </li>
-            <li>
-                    <a onclick="alert('Currently on Process');"><i class="fa fa-fw fa-pencil"></i> Solutions</a>
-            </li>
-            <!-- <li>
-                <a href="bootstrap-elements.html"><i class="fa fa-fw fa-desktop"></i> Genraral Info</a>
-            </li>
-            <li>
-                <a href="bootstrap-grid.html"><i class="fa fa-fw fa-wrench"></i>Project Lists</a>
+                        </a>
+                    </li>
+                    <!-- <li class="message-footer">
+                        <a href="#">Read All New Messages</a>
+                    </li> -->
+                </ul>
             </li>
 
-            <li>
-                <a href="blank-page.html"><i class="fa fa-fw fa-book"></i> Books and References</a>
+
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>
+                <ul class="dropdown-menu alert-dropdown">
+                    <li>
+                        <a href="#">Notification <span class="label label-default">new</span></a>
+                        <p class="small text-muted" style="margin:0px 10px;">
+                            For any Complain, suggestion or Sponsorship, kindly contact the admin email below <br><br>sheygun@aol.com
+                        </p>
+                    </li>
+
+                    <li class="divider"></li>
+                    <!-- <li>
+                        <a href="#">View All</a>
+                    </li> -->
+                </ul>
             </li>
-            <li>
-                <a href="index-rtl.html"><i class="fa fa-fw fa-dashboard"></i> About and Contact Us</a>
-            </li> -->
+
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdowns"><i class="fa fa-user"></i> Guest <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                    </li>
+                </ul>
+            </li>
         </ul>
-    </div>
-</nav>
 
-<div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-aria-hidden="true">
-<div class="modal-dialog" role="document">
-  <div class="modal-content">
-    <div class="modal-header text-center">
-      <h4 class="modal-title w-100 font-weight-bold">PAST QUESTIONS AND SOLUTIONS</h4>
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-       <center> <br>
-        <form action="">
-                    <h6 class="red-text">This section is for General Studies</h6>
-                <select class="browser-default custom-select myselect" id="general">
-                        <option class="myoption" value="general">-- General Studies --</option>
-                        <option class="myoption" value="100">100 Level</option>
-                        <option class="myoption" value="200">200 Level</option>
-                        <option class="myoption" value="300">300 Level</option>
-                 </select>  <br> <hr> <br>
+    <!-- ================================================ side bar ============================================================================ -->
 
 
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav side-nav">
+                <li class="">
+                    <a href="/"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                </li>
+                <!-- <li>
+                    <a href="/timetable"><i class="fa fa-fw fa-table"></i> Timetable</a>
+                </li> -->
+                <li>
+                    <a data-toggle="modal" data-target="#modalLoginForm"><i class="fa fa-fw fa-files-o"></i> Past Questions & Solutions</a>
+                </li>
+                <!-- <li>
+                        <a onclick="alert('Currently on Process');"><i class="fa fa-fw fa-pencil">Solutions</i> </a>
+                </li> -->
+                <li>
+                        <a href="/scholarship"><i class="fa fa-fw fa-money"></i> Scholarships</a>
+                </li>
+                <li>
+                        <a href="/event"><i class="fa fa-fw fa-calendar"></i> Event</a>
+                </li>
 
-            <select class="browser-default custom-select myselect" id="selectObj">
-                <option selected class="myoption" value="faculty">-- Select Faculty --</option>
-                <option class="myoption" value="science">Science</option>
-                <option class="myoption" value="art">Art</option>
-                <option class="myoption" value="education">Education</option>
-                <option class="myoption" value="law">Law</option>
-                <option class="myoption" value="fms">Management Science</option>
-                <option class="myoption" value="fss">Social Science</option>
-                <option class="myoption" value="masscom">Mass Communication</option>
-                <option class="myoption" value="transport">Transport</option>
-              </select> <br> <br>
+                <li>
+                    <a href="javascript:;" data-toggle="collapse" data-target="#collapseExample"><i class="fa fa-sign-in"></i> Library <i class="fa fa-fw fa-caret-down"></i></a>
+                    <div>
+                        <ul class="collapse" id="collapseExample">
 
-              <select class="browser-default custom-select myselect" disabled id="selectObj2" >
-                    <option selected class="myoption" value="dept">-- Select Department --</option>
-                    <option class="myoption" value="" id="one"></option>
-                    <option class="myoption" value="" id="two"></option>
-                    <option class="myoption" value="" id="three"></option>
-                    <option class="myoption" value="" id="four"></option>
-                    <option class="myoption" value="" id="five"></option>
-                    <option class="myoption" value="" id="six"></option>
-                    <option class="myoption" value="" id="seven"></option>
-                    <option class="myoption" value="" id="eight"></option>
-                    <option class="myoption" value="" id="nine"></option>
+                            <li class="">
+                                <a href="#" class="">Books</a>
+                            </li>
+                            <li class="">
+                                    <a href="#" class="">Journals</a>
+                            </li>
+                            <li class="">
+                                    <a href="#" class="">Project Topics</a>
+                            </li>
+                            <li class="">
+                                    <a href="#" class="">Course Outlines</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#collapseExample2"><i class="fa fa-credit-card"></i> Market Unit <i class="fa fa-fw fa-caret-down"></i></a>
+                        <div>
+                            <ul class="collapse" id="collapseExample2">
+
+                                <li class="">
+                                    <a href="#" class="">Buy an Item</a>
+                                </li>
+                                <li class="">
+                                        <a href="#" class="">Sell an Item</a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                            <a href="javascript:;" data-toggle="collapse" data-target="#collapseExample3"><i class="fa fa-user"></i> Profile <i class="fa fa-fw fa-caret-down"></i></a>
+                            <div>
+                                <ul class="collapse" id="collapseExample3">
+
+                                    <li class="">
+                                        <a href="#" class="">Contact Us</a>
+                                    </li>
+                                    <li class="">
+                                            <a href="#" class="">Advertise with us</a>
+                                    </li>
+                                    <li class="">
+                                            <a href="#" class="">Terms and Conditions</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                <li>
+                    <a href="#"><i class="fa fa-fw fa-users"></i>  Hire a Tutor</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-fw fa-code"></i>Hire a Web Developer</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h4 class="modal-title w-100 font-weight-bold">PAST QUESTIONS AND SOLUTIONS</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+           <center> <br>
+            <form action="">
+                        <h6 class="red-text">This section is for General Studies</h6>
+                    <select class="browser-default custom-select myselect" id="general">
+                            <option class="myoption" value="general">-- General Studies --</option>
+                            <option class="myoption" value="100">100 Level</option>
+                            <option class="myoption" value="200">200 Level</option>
+                            <option class="myoption" value="300">300 Level</option>
+                     </select>  <br> <hr> <br>
+
+
+
+                <select class="browser-default custom-select myselect" id="selectObj">
+                    <option selected class="myoption" value="faculty">-- Select Faculty --</option>
+                    <option class="myoption" value="science">Science</option>
+                    <option class="myoption" value="art">Art</option>
+                    <option class="myoption" value="education">Education</option>
+                    <option class="myoption" value="law">Law</option>
+                    <option class="myoption" value="fms">Management Science</option>
+                    <option class="myoption" value="fss">Social Science</option>
+                    <option class="myoption" value="masscom">Mass Communication</option>
+                    <option class="myoption" value="transport">Transport</option>
                   </select> <br> <br>
 
-                  <select class="browser-default custom-select myselect" disabled id="selectObj3">
-                        <option class="myoption" value="level">-- Select Level --</option>
-                        <option class="myoption" value="100">100</option>
-                        <option class="myoption" value="200">200</option>
-                        <option class="myoption" value="300">300</option>
-                        <option class="myoption" value="400">400</option>
-                        <option class="myoption" value="500">500</option>
-                        <!-- <option class="myoption" value="others">Others</option> -->
+                  <select class="browser-default custom-select myselect" disabled id="selectObj2" >
+                        <option selected class="myoption" value="dept">-- Select Department --</option>
+                        <option class="myoption" value="" id="one"></option>
+                        <option class="myoption" value="" id="two"></option>
+                        <option class="myoption" value="" id="three"></option>
+                        <option class="myoption" value="" id="four"></option>
+                        <option class="myoption" value="" id="five"></option>
+                        <option class="myoption" value="" id="six"></option>
+                        <option class="myoption" value="" id="seven"></option>
+                        <option class="myoption" value="" id="eight"></option>
+                        <option class="myoption" value="" id="nine"></option>
                       </select> <br> <br>
-        </form>
-       </center>
-    <div class="modal-footer d-flex justify-content-center">
-      <button class="btn btn-block blue " disabled id="clickme"><span class="h4 white-text" style="font-weight: bold;" id="checkName">PROCEED >>></span></button>
+
+                      <select class="browser-default custom-select myselect" disabled id="selectObj3">
+                            <option class="myoption" value="level">-- Select Level --</option>
+                            <option class="myoption" value="100">100</option>
+                            <option class="myoption" value="200">200</option>
+                            <option class="myoption" value="300">300</option>
+                            <option class="myoption" value="400">400</option>
+                            <option class="myoption" value="500">500</option>
+                            <!-- <option class="myoption" value="others">Others</option> -->
+                          </select> <br> <br>
+            </form>
+           </center>
+        <div class="modal-footer d-flex justify-content-center">
+          <button class="btn btn-block blue " disabled id="clickme"><span class="h4 white-text" style="font-weight: bold;" id="checkName">PROCEED >>></span></button>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-</div>
+    </div>

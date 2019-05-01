@@ -24,7 +24,7 @@
     <script type="text/javascript" src="stylesheets/js/styleswitch.js"></script>
     <script src="stylesheets/js/jquery.fractionslider.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript" src="stylesheets/js/jquery.smartmenus.min.js"></script>
-    <script type="text/javascript" src="stylesheets/js/jquery.smartmenus.bootstrap.min.js"></script>
+    <!-- <script type="text/javascript" src="stylesheets/js/jquery.smartmenus.bootstrap.min.js"></script> -->
     <script type="text/javascript" src="stylesheets/js/owl.carousel.min.js"></script>
     <script type="text/javascript" src="stylesheets/js/jflickrfeed.js"></script>
     <script type="text/javascript" src="stylesheets/js/jquery.magnific-popup.min.js"></script>
@@ -33,3 +33,48 @@
     <script type="text/javascript" src="stylesheets/js/swipe.js"></script>
     <script type="text/javascript" src="stylesheets/js/jquery-scrolltofixed-min.js"></script>
     <script type="text/javascript" src="stylesheets/js/jquery.matchHeight-min.js"></script>
+    <script src="stylesheets/js/SmoothScroll.min.js"></script>
+
+    <script>
+        new WOW().init();
+    </script>
+
+
+<script src="stylesheets/js/move-top.js"></script>
+<script src="stylesheets/js/easing.js"></script>
+<script>
+
+  jQuery(document).ready(function ($) {
+    $(".scrolled").click(function (event) {
+      event.preventDefault();
+      $('html,body').animate({
+        scrollTop: $(this.hash).offset().top
+      }, 900);
+    });
+  });
+</script>
+<!-- start-smoth-scrolling -->
+
+
+<!-- here stars scrolling icon -->
+<script>
+    $(document).ready(function () {
+
+      var defaults = {
+        containerID: 'toTop', // fading element id
+        containerHoverID: 'toTopHover', // fading element hover id
+        scrollSpeed: 1200,
+        easingType: 'linear'
+      };
+
+
+      $().UItoTop({
+        easingType: 'easeOutQuart'
+      });
+
+    });
+  </script>
+<!-- //here ends scrolling icon -->
+
+    </body>
+</html>

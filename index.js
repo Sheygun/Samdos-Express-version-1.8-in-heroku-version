@@ -16,6 +16,14 @@ express()
     res.render('timetable', { title: 'Express' })
   })
 
+  .get('/scholarship', function(req, res) {
+    res.render('scholarship', { title: 'Express' })
+  })
+
+  .get('/event', function(req, res) {
+    res.render('event', { title: 'Express' })
+  })
+
   .get('/solution', function(req, res) {
     res.render('solution', { title: 'Express' })
   })

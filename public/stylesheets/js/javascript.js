@@ -287,228 +287,228 @@ faculty.onchange = function(){
                                 window.location.replace('/csclevel3');
                             }
                         } else if(faculty.value == "science" && department.value == "csc" && level.value == "400"){
-                            check.disabled = false;
+                            check.disabled = true;
                             check.onclick = function(){
                                 window.location.replace('/csclevel4');
                             }
                         } else if(faculty.value == "science" && department.value == "csc" && level.value == "500"){
-                            check.disabled = false;
+                            check.disabled = true;
                             check.onclick = function(){
                                 window.location.replace('/csclevel5');
                             }
                         }
                          // ======================================= Maths science =============================================
                          if(faculty.value == "science" && department.value == "mat" && level.value == "100"){
-                            check.disabled = false;
+                            check.disabled = true;
                             check.onclick = function(){
                                 window.location.replace('/matlevel1');
                             }
                         } else if(faculty.value == "science" && department.value == "mat" && level.value == "200"){
-                            check.disabled = false;
+                            check.disabled = true;
                             check.onclick = function(){
                                 window.location.replace('/matlevel2');
                             }
                         } else if(faculty.value == "science" && department.value == "mat" && level.value == "300"){
-                            check.disabled = false;
+                            check.disabled = true;
                             check.onclick = function(){
                                 window.location.replace('/matlevel3');
                             }
                         } else if(faculty.value == "science" && department.value == "mat" && level.value == "400"){
-                            check.disabled = false;
+                            check.disabled = true;
                             check.onclick = function(){
                                 window.location.replace('/matlevel4');
                             }
                         } else if(faculty.value == "science" && department.value == "mat" && level.value == "500"){
-                            check.disabled = false;
+                            check.disabled = true;
                             check.onclick = function(){
                                 window.location.replace('/matlevel5');
                             }
                         }
                         // ======================================= Zoology science =============================================
                         if(faculty.value == "science" && department.value == "zoo" && level.value == "100"){
-                            check.disabled = false;
+                            check.disabled = true;
                             check.onclick = function(){
                                 window.location.replace('/zoolevel1');
                             }
                         } else if(faculty.value == "science" && department.value == "zoo" && level.value == "200"){
-                            check.disabled = false;
+                            check.disabled = true;
                             check.onclick = function(){
                                 window.location.replace('/zoolevel2');
                             }
                         } else if(faculty.value == "science" && department.value == "zoo" && level.value == "300"){
-                            check.disabled = false;
+                            check.disabled = true;
                             check.onclick = function(){
                                 window.location.replace('/zoolevel3');
                             }
                         } else if(faculty.value == "science" && department.value == "zoo" && level.value == "400"){
-                            check.disabled = false;
+                            check.disabled = true;
                             check.onclick = function(){
                                 window.location.replace('/zoolevel4');
                             }
                         } else if(faculty.value == "science" && department.value == "zoo" && level.value == "500"){
-                            check.disabled = false;
+                            check.disabled = true;
                             check.onclick = function(){
                                 window.location.replace('/zoolevel5');
                             }
                         }
                         // ======================================= Fishery science =============================================
                         if(faculty.value == "science" && department.value == "fis" && level.value == "100"){
-                            check.disabled = false;
+                            check.disabled = true;
                             check.onclick = function(){
                                 window.location.replace('/fislevel1');
                             }
                         } else if(faculty.value == "science" && department.value == "fis" && level.value == "200"){
-                            check.disabled = false;
+                            check.disabled = true;
                             check.onclick = function(){
                                 window.location.replace('/fislevel2');
                             }
                         } else if(faculty.value == "science" && department.value == "fis" && level.value == "300"){
-                            check.disabled = false;
+                            check.disabled = true;
                             check.onclick = function(){
                                 window.location.replace('/fislevel3');
                             }
                         } else if(faculty.value == "science" && department.value == "fis" && level.value == "400"){
-                            check.disabled = false;
+                            check.disabled = true;
                             check.onclick = function(){
                                 window.location.replace('/fislevel4');
                             }
                         } else if(faculty.value == "science" && department.value == "fis" && level.value == "500"){
-                            check.disabled = false;
+                            check.disabled = true;
                             check.onclick = function(){
                                 window.location.replace('/fislevel5');
                             }
                         }
                         // ======================================= Biochemistry science =============================================
                         if(faculty.value == "science" && department.value == "bch" && level.value == "100"){
-                            check.disabled = false;
+                            check.disabled = true;
                             check.onclick = function(){
                                 window.location.replace('/bchlevel1');
                             }
                         } else if(faculty.value == "science" && department.value == "bch" && level.value == "200"){
-                            check.disabled = false;
+                            check.disabled = true;
                             check.onclick = function(){
                                 window.location.replace('/bchlevel2');
                             }
                         } else if(faculty.value == "science" && department.value == "bch" && level.value == "300"){
-                            check.disabled = false;
+                            check.disabled = true;
                             check.onclick = function(){
                                 window.location.replace('/bchlevel3');
                             }
                         } else if(faculty.value == "science" && department.value == "bch" && level.value == "400"){
-                            check.disabled = false;
+                            check.disabled = true;
                             check.onclick = function(){
                                 window.location.replace('/bchlevel4');
                             }
                         } else if(faculty.value == "science" && department.value == "bch" && level.value == "500"){
-                            check.disabled = false;
+                            check.disabled = true;
                             check.onclick = function(){
                                 window.location.replace('/bchlevel5');
                             }
                         }
                         // ======================================= Microbiology science =============================================
                         if(faculty.value == "science" && department.value == "mcb" && level.value == "100"){
-                            check.disabled = false;
+                            check.disabled = true;
                             check.onclick = function(){
                                 window.location.replace('/mcblevel1');
                             }
                         } else if(faculty.value == "science" && department.value == "mcb" && level.value == "200"){
-                            check.disabled = false;
+                            check.disabled = true;
                             check.onclick = function(){
                                 window.location.replace('/mcblevel2');
                             }
                         } else if(faculty.value == "science" && department.value == "mcb" && level.value == "300"){
-                            check.disabled = false;
+                            check.disabled = true;
                             check.onclick = function(){
                                 window.location.replace('/mcblevel3');
                             }
                         } else if(faculty.value == "science" && department.value == "mcb" && level.value == "400"){
-                            check.disabled = false;
+                            check.disabled = true;
                             check.onclick = function(){
                                 window.location.replace('/mcblevel4');
                             }
                         } else if(faculty.value == "science" && department.value == "mcb" && level.value == "500"){
-                            check.disabled = false;
+                            check.disabled = true;
                             check.onclick = function(){
                                 window.location.replace('/mcblevel5');
                             }
                         }
                         // ======================================= Chemistry science =============================================
                         if(faculty.value == "science" && department.value == "chm" && level.value == "100"){
-                            check.disabled = false;
+                            check.disabled = true;
                             check.onclick = function(){
                                 window.location.replace('/chmlevel1');
                             }
                         } else if(faculty.value == "science" && department.value == "chm" && level.value == "200"){
-                            check.disabled = false;
+                            check.disabled = true;
                             check.onclick = function(){
                                 window.location.replace('/chmlevel2');
                             }
                         } else if(faculty.value == "science" && department.value == "chm" && level.value == "300"){
-                            check.disabled = false;
+                            check.disabled = true;
                             check.onclick = function(){
                                 window.location.replace('/chmlevel3');
                             }
                         } else if(faculty.value == "science" && department.value == "chm" && level.value == "400"){
-                            check.disabled = false;
+                            check.disabled = true;
                             check.onclick = function(){
                                 window.location.replace('/chmlevel4');
                             }
                         } else if(faculty.value == "science" && department.value == "chm" && level.value == "500"){
-                            check.disabled = false;
+                            check.disabled = true;
                             check.onclick = function(){
                                 window.location.replace('/chmlevel5');
                             }
                         }
                         // ======================================= Botany science =============================================
                         if(faculty.value == "science" && department.value == "bot" && level.value == "100"){
-                            check.disabled = false;
+                            check.disabled = true;
                             check.onclick = function(){
                                 window.location.replace('/botlevel1');
                             }
                         } else if(faculty.value == "science" && department.value == "bot" && level.value == "200"){
-                            check.disabled = false;
+                            check.disabled = true;
                             check.onclick = function(){
                                 window.location.replace('/botlevel2');
                             }
                         } else if(faculty.value == "science" && department.value == "bot" && level.value == "300"){
-                            check.disabled = false;
+                            check.disabled = true;
                             check.onclick = function(){
                                 window.location.replace('/botlevel3');
                             }
                         } else if(faculty.value == "science" && department.value == "bot" && level.value == "400"){
-                            check.disabled = false;
+                            check.disabled = true;
                             check.onclick = function(){
                                 window.location.replace('/botlevel4');
                             }
                         } else if(faculty.value == "science" && department.value == "bot" && level.value == "500"){
-                            check.disabled = false;
+                            check.disabled = true;
                             check.onclick = function(){
                                 window.location.replace('/botlevel5');
                             }
                         }
                         // ======================================= Physics science =============================================
                         if(faculty.value == "science" && department.value == "phy" && level.value == "100"){
-                            check.disabled = false;
+                            check.disabled = true;
                             check.onclick = function(){
                                 window.location.replace('/phylevel1');
                             }
                         } else if(faculty.value == "science" && department.value == "phy" && level.value == "200"){
-                            check.disabled = false;
+                            check.disabled = true;
                             check.onclick = function(){
                                 window.location.replace('/phylevel2');
                             }
                         } else if(faculty.value == "science" && department.value == "phy" && level.value == "300"){
-                            check.disabled = false;
+                            check.disabled = true;
                             check.onclick = function(){
                                 window.location.replace('/phylevel3');
                             }
                         } else if(faculty.value == "science" && department.value == "phy" && level.value == "400"){
-                            check.disabled = false;
+                            check.disabled = true;
                             check.onclick = function(){
                                 window.location.replace('/phylevel4');
                             }
                         } else if(faculty.value == "science" && department.value == "phy" && level.value == "500"){
-                            check.disabled = false;
+                            check.disabled = true;
                             check.onclick = function(){
                                 window.location.replace('/phylevel5');
                             }
