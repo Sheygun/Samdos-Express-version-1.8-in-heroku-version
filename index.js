@@ -1,12 +1,19 @@
 const express = require('express')
+const bodyParser = require('body-parser')
+const nodemailer = require('nodemailer')
 const path = require('path')
 const PORT = process.env.PORT || 5000
+
+
 
 express()
   .use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
 
+  // Body Parser Middleware
+  .use(bodyParser.urlencoded({ extended: false}))
+  .use(bodyParser.json())
 
   .get('/', (req, res) => res.render('index'))
 
@@ -49,6 +56,60 @@ express()
     res.render('others/message', { title: 'Express' })
   })
 
+  .post('/send', function(req, res) {
+    res.render('others/message', {product: ''})
+    // console.log(req.body)
+    const output = '<p>You have a new contact request</p> <br> <h3>Contact Details</h3> <br> <ul><li>Name: ${req.body.name}</li><li>Name: ${req.body.name}</li><li>Phone Number: ${req.body.phoneNumber}</li><li>Email: ${req.body.email}</li><li>Feedback: ${req.body.feedback}</li><li><h2>Messages</h2> <br>Messages: ${req.body.message}</li></ul>';
+
+    let transporter = nodemailer.createTransport({
+      // host: "gmail",
+      port: 993,
+      service: 'gmail',
+      //secure: false, // true for 465, false for other ports
+      auth: {
+        user: 'hollasheg@gmail.com', // generated ethereal user
+        pass: 'Oluwasegun12' // generated ethereal password
+      },
+
+      tls:{
+        rejectUnauthorized: false
+      }
+
+    })
+
+
+
+    let mailOptions = {
+      from: 'hollasheg@gmail.com',
+      to: 'sheygun@aol.com',
+      subject: "Samdos Contact Request",
+      text: req.body.message,
+      html: output
+    }
+
+
+      transporter.sendMail(mailOptions, (error, infos) => {
+        if (error) {
+          // console.log("im hungry");
+            return console.log(error);
+        }
+        console.log("Message sent: %s", info.messageId);
+        console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+        res.render('others/message', {product: 'Your Email has been sent'})
+    });
+
+
+
+
+  })
+
+
+
+
+
+
+// ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
+
   // =============================== Computer Science ===========================
   .get('/csclevel1', function(req, res, next) {
     res.render('pastquestions/science/computer/100level', {})
@@ -74,6 +135,7 @@ express()
   //   others: 'Express'
   //   })
   // })
+
 
   // =============================== Mathematics ===========================
   .get('/matlevel1', function(req, res, next) {

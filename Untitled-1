@@ -1,0 +1,133 @@
+const express = require('express')
+const bodyParser = require('body-parser')
+const nodemailer = require('nodemailer')
+const path = require('path')
+const PORT = process.env.PORT || 5000
+
+
+
+express()
+  .use(express.static(path.join(__dirname, 'public')))
+  .set('views', path.join(__dirname, 'views'))
+  .set('view engine', 'ejs')
+
+  // Body Parser Middleware
+  .use(bodyParser.urlencoded({ extended: false}))
+  .use(bodyParser.json())
+
+  .get('/', (req, res) => res.render('index'))
+
+  // ======================= index section ================================
+
+  .get('/timetable', function(req, res) {
+    res.render('timetable', { title: 'Express' })
+  })
+
+  .get('/scholarship', function(req, res) {
+    res.render('scholarship', { title: 'Express' })
+  })
+
+  .get('/event', function(req, res) {
+    res.render('event', { title: 'Express' })
+  })
+
+  .get('/solution', function(req, res) {
+    res.render('solution', { title: 'Express' })
+  })
+
+// =================================== others folder =================================
+  .get('/test260219', function(req, res) {
+    res.render('others/toyintest260219', { title: 'Express' })
+  })
+
+  .get('/contact', function(req, res) {
+    res.render('others/contact', { title: 'Express' })
+  })
+
+  .get('/advertise', function(req, res) {
+    res.render('others/advertise', { title: 'Express' })
+  })
+
+  .get('/terms', function(req, res) {
+    res.render('others/terms', { title: 'Express' })
+  })
+
+  .get('/message', function(req, res) {
+    res.render('others/message', { title: 'Express' })
+  })
+
+  .post('/send', function(req, res) {
+    res.render('others/message', {product: ''})
+    // console.log(req.body)
+    const output = '<p>You have a new contact request</p> <br> <h3>Contact Details</h3> <br> <ul><li>Name: ${req.body.name}</li><li>Name: ${req.body.name}</li><li>Phone Number: ${req.body.phoneNumber}</li><li>Email: ${req.body.email}</li><li>Feedback: ${req.body.feedback}</li><li><h2>Messages</h2> <br>Messages: ${req.body.message}</li></ul>';
+
+    async function main(){
+      let testAccount = await nodemailer.createTestAccount();
+      let transporter = nodemailer.createTransport({
+        host: "mail.google.com",
+        port: 587,
+        secure: false, // true for 465, false for other ports
+        auth: {
+          user: 'hollasheg@gmail.com', // generated ethereal user
+          pass: 'Oluwasegun12' // generated ethereal password
+        }
+      })
+
+      tls:{
+        rejectUnauthorized: false
+      }
+      let info = await transporter.sendMail({
+        from: req.body.name,
+        to: "Olabayo Segun Emmanuel, hollasheg@gmail.com",
+        subject: "Samdos Contact Request",
+        text: req.body.message,
+        html: output
+      })
+
+
+      console.log("Message sent: %s", info.messageId);
+      console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+      res.render('others/message', {product: 'Your Message has been Sent'})
+    }
+
+    main().catch(console.error)
+
+  })
+
+
+
+
+
+
+let transporter = nodemailer.createTransport({
+        host: "mail.google.com",
+        port: 587,
+        secure: false, // true for 465, false for other ports
+        auth: {
+          user: 'hollasheg@gmail.com', // generated ethereal user
+          pass: 'Oluwasegun12' // generated ethereal password
+        }
+      })
+
+      tls:{
+        rejectUnauthorized: false
+      }
+      let mailOption = {
+        from: '"Nodemailer Contact" <hollasheg@gmail.com>',
+        to: 'sheygun@aol.com',
+        subject: "Samdos Contact Request",
+        text: req.body.message,
+        html: output
+      }
+
+      transporter.sendMail(mailOptions, (err, info) => {
+        if (err) {
+            return console.log(err);
+        }
+      )}
+
+
+      console.log("Message sent: %s", info.messageId);
+      console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+      res.render('others/message', {product: 'Your Message has been Sent'})
+  }

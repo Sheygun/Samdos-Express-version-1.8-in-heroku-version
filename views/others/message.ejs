@@ -29,13 +29,36 @@
                     <i class="fa fa-envelope"></i> Message Us
                 </li>
             </ol>
-
-
-
             <%- include ../partial/extra %>
 
+            <div class="container ">
+                <div class="row">
+                    <div class="col-md-12">
+                        <form method="POST" action="send" class="text-center border border-light center-block" style="width: 600px;">
+                            <p class="h3" style="margin-bottom: 20px;">Contact us</p>
 
+                            <p><%- product %></p>
+                            <input type="text" id="defaultContactFormName" name="name" class="form-control" style="margin-bottom: 20px;" placeholder="Name">
+                            <input type="text" id="defaultContactFormNumber" name="phoneNumber" class="form-control" style="margin-bottom: 20px;" placeholder="Phone Number">
+                            <input type="email" id="defaultContactFormEmail" name="email" class="form-control" style="margin-bottom: 20px;" placeholder="E-mail">
 
+                            <label>Subject</label>
+                            <select class="browser-default custom-select form-control" name="feedback" style="margin-bottom: 20px;">
+                                <option value="" disabled>Choose option</option>
+                                <option value="Feedback" selected>Feedback</option>
+                                <option value="Suggestion">Suggestion</option>
+                                <option value="Complain">Complain</option>
+                                <option value="Advertise">Advertise</option>
+                                <option value="Compliment">Compliment</option>
+                            </select>
+                            <div class="form-group">
+                                <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" name="messagec" style="margin-bottom: 20px; height: 150px;" rows="3" placeholder="Message"></textarea>
+                            </div>
+                            <button class="btn btn-info btn-block" type="submit"><span class="h4">Send</span></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
 
     <!-- =============================================================== footer ============================================================ -->
     <div style="height: 30px;"></div>
