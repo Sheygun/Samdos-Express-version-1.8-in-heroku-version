@@ -1,6 +1,8 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const nodemailer = require('nodemailer')
+const smtpTransport = require('nodemailer-smtp-transport')
+const { check, validationResult } = require('express-validator/check');
 const path = require('path')
 const PORT = process.env.PORT || 5000
 
@@ -56,55 +58,56 @@ express()
     res.render('others/message', { title: 'Express' })
   })
 
-  .post('/send', function(req, res) {
-    res.render('others/message', {product: ''})
-    // console.log(req.body)
-    const output = '<p>You have a new contact request</p> <br> <h3>Contact Details</h3> <br> <ul><li>Name: ${req.body.name}</li><li>Name: ${req.body.name}</li><li>Phone Number: ${req.body.phoneNumber}</li><li>Email: ${req.body.email}</li><li>Feedback: ${req.body.feedback}</li><li><h2>Messages</h2> <br>Messages: ${req.body.message}</li></ul>';
+  .post('/proceed', function(req, res, next) {
+    res.render('others/message', { title: 'Express' })
+      const output = '<center><h3>You have a new contact request</h3> </center> <br> <h2>Contact Details</h2> <br>' +
+      '<ul>'+
+        '<li>Name: '+req.body.name +' </li>'+
+        '<li>Phone Number : '+req.body.phoneNumber +'</li>' +
+        '<li>Email : '+ req.body.email + '</li>' +
+        '<li>Feedback : '+ req.body.feedback + '</li> <br>' +
+        '</ul>' +
 
-    let transporter = nodemailer.createTransport({
-      // host: "gmail",
-      port: 993,
-      service: 'gmail',
-      //secure: false, // true for 465, false for other ports
-      auth: {
-        user: 'hollasheg@gmail.com', // generated ethereal user
-        pass: 'Oluwasegun12' // generated ethereal password
-      },
+        '<h2>Messages <br></h2>' +
+        '<h4>' + req.body.message + '</h4>'
 
-      tls:{
-        rejectUnauthorized: false
+
+
+      let transporter = nodemailer.createTransport({
+      host: 'smtp.gmail.com',
+      port: 465,
+      secure: true,
+        auth: {
+          user: 'hollasheg@gmail.com', // generated ethereal user
+          pass: 'Oluwasegun12' // generated ethereal password
+        },
+
+        tls:{
+          rejectUnauthorized: false
+        }
+
+      })
+
+
+      let mailOptions = {
+        from: req.body.name,
+        to: '"hollasheg" <hollasheg@gmail.com>',
+        subject: "Samdos Contact Request",
+        text: req.body.message,
+        html: output
       }
 
-    })
 
-
-
-    let mailOptions = {
-      from: 'hollasheg@gmail.com',
-      to: 'sheygun@aol.com',
-      subject: "Samdos Contact Request",
-      text: req.body.message,
-      html: output
-    }
-
-
-      transporter.sendMail(mailOptions, (error, infos) => {
-        if (error) {
-          // console.log("im hungry");
-            return console.log(error);
-        }
-        console.log("Message sent: %s", info.messageId);
-        console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-        res.render('others/message', {product: 'Your Email has been sent'})
-    });
-
-
-
-
+        transporter.sendMail(mailOptions, (error, info) => {
+          if (error) {
+              return console.log(err);
+          } else{
+            console.log("Message sent: %s", info.messageId);
+            console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+            // res.redirect('/message')
+          }
+      })
   })
-
-
-
 
 
 
