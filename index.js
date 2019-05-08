@@ -82,9 +82,9 @@ express()
           pass: 'Oluwasegun12' // generated ethereal password
         },
 
-        tls:{
-          rejectUnauthorized: false
-        }
+        // tls:{
+        //   rejectUnauthorized: false
+        // }
 
       })
 
