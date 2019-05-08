@@ -31,35 +31,39 @@
             </ol>
             <%- include ../partial/extra %>
 
-            <div class="container ">
-                <div class="row container">
-                    <div class="col-md-12">
-                        <form method="POST" action="send" class="text-center border border-light center-block" style="width: auto;">
-                            <p class="h3" style="margin-bottom: 20px;">Contact us</p>
+            <div class=" ">
 
-                            <div class="alert alert-info alert-dismissable" id="notify" style="display: none;">
-                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                                <h4>Please fill the form correctly</h4>
-                            </div>
+                <div class="row">
+                    <div class="col-md-7 mx-auto">
+                            <form id="contact-form" class="text-center border border-light p-5">
+                                    <p class="h3 mb-4">Contact us</p>
 
-                            <input type="text" id="defaultContactFormName" name="name" class="form-control" style="margin-bottom: 20px; padding: 25px;" placeholder="Name">
-                            <input type="text" id="defaultContactFormNumber" name="phoneNumber" class="form-control" style="margin-bottom: 20px; padding: 25px;" placeholder="Phone Number">
-                            <input type="email" id="defaultContactFormEmail" name="email" class="form-control" style="margin-bottom: 20px; padding: 25px;" placeholder="E-mail">
+                                    <div class="alert alert-info alert-dismissable" id="notify" style="display: none;">
+                                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                            <h4 id="status"></h4>
+                                        </div>
 
-                            <label>Subject</label>
-                            <select class="browser-default custom-select form-control" id="feedback" name="feedback" style="margin-bottom: 20px; height: 50px;">
-                                <option value="" disabled>Choose option</option>
-                                <option value="Feedback" selected>Feedback</option>
-                                <option value="Suggestion">Suggestion</option>
-                                <option value="Complain">Complain</option>
-                                <option value="Advertise">Advertise</option>
-                                <option value="Compliment">Compliment</option>
-                            </select>
-                            <div class="form-group">
-                                <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" name="message" style="margin-bottom: 20px; height: 150px;" rows="3" placeholder="Message"></textarea>
-                            </div>
-                            <button class="btn btn-info btn-block" id="submits" type="submit"><span class="h4"><b>Send Message</b></span></button>
-                        </form>
+                                    <input type="text" id="defaultContactFormName"  name="name" class="form-control mb-4" style="height: 50px;" placeholder="Name">
+                                    <input type="text" id="defaultContactFormPhone" name="phoneNumber" class="form-control mb-4" style="height: 50px;" placeholder="Phone Number">
+                                    <input type="email" id="defaultContactFormEmail" name="email" class="form-control mb-4"style="height: 50px;" placeholder="E-mail">
+                                    <label>Subject</label>
+                                    <select class="browser-default custom-select mb-4" id="feedback" name="feedback" style="height: 50px;">
+                                            <option value="" disabled>Choose option</option>
+                                            <option value="Feedback" selected>Feedback</option>
+                                            <option value="Suggestion">Suggestion</option>
+                                            <option value="Complain">Complain</option>
+                                            <option value="Advertise">Advertise</option>
+                                            <option value="Compliment">Compliment</option>
+                                    </select>
+                                    <div class="form-group">
+                                        <textarea class="form-control rounded-0" name="message" id="exampleFormControlTextarea2" style="height: 150px;" rows="3" placeholder="Message"></textarea>
+                                    </div>
+                                    <div class="custom-control custom-checkbox mb-4">
+                                        <input type="checkbox" class="custom-control-input" id="defaultContactFormCopy">
+                                    </div>
+                                    <a class="btn btn-primary btn-block" onclick="validateForm()"><span class="h4"><b>Send Message</b></span></a>
+                                    <!-- <button class="btn btn-info btn-block" onsubmit="validateForm();"><span class="h4"><b>Send Message</b></span></button> -->
+                                </form>
                     </div>
                 </div>
             </div>
@@ -77,6 +81,58 @@
 
 
 <%- include ../partial/script %>
+
+<script>
+     function validateForm() {
+
+     let name =  document.getElementById('defaultContactFormName').value;
+  if (name == "") {
+        document.getElementById('notify').style.display = "block";
+      document.getElementById('status').innerHTML = "Name cannot be empty";
+      return false;
+  }else {
+    document.getElementById('notify').style.display = "none";
+  }
+
+  let phone =  document.getElementById('defaultContactFormPhone').value;
+  if (phone == "") {
+        document.getElementById('notify').style.display = "block";
+      document.getElementById('status').innerHTML = "Phone Number cannot be empty";
+      return false;
+  }
+
+  let email =  document.getElementById('defaultContactFormEmail').value;
+  if (email == "") {
+    document.getElementById('notify').style.display = "block";
+      document.getElementById('status').innerHTML = "Email cannot be empty";
+      return false;
+  }
+        else if (email != ""){
+      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      if(!re.test(email)){
+        document.getElementById('notify').style.display = "block";
+          document.getElementById('status').innerHTML = "Email format invalid";
+          return false;
+      }
+  }
+  else {
+    document.getElementById('notify').style.display = "none";
+  }
+
+  var message =  document.getElementById('exampleFormControlTextarea2').value;
+  if (message == "") {
+    document.getElementById('notify').style.display = "block";
+      document.getElementById('status').innerHTML = "Message cannot be empty";
+      return false;
+  } else {
+    document.getElementById('notify').style.display = "none";
+  }
+    document.getElementById('notify').style.display = "block";
+  document.getElementById('status').innerHTML = "Sending...";
+  document.getElementById('contact-form').submit();
+
+  }
+</script>
 
 </body>
 

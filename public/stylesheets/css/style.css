@@ -10,7 +10,7 @@ body{
     margin-top: 50px;
 }
 .my_p{
-    letter-spacing: 2px; line-height: 30px;
+    letter-spacing: 1px; line-height: 30px;
 }
 .about-border{
     border-right: 1px transparent black;
@@ -24,6 +24,9 @@ body{
     height: 50px;
     border-radius: 5px;
     background: white;
+}
+.myoption{
+    /* height: 50px; */
 }
 .myselect2{
     visibility: hidden;
