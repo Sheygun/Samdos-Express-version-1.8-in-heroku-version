@@ -58,7 +58,7 @@ express()
     res.render('others/message', { title: 'Express' })
   })
 
-  .post('/proceed', function(req, res, next) {
+  .post('/send', function(req, res, next) {
     res.render('others/message', { title: 'Express' })
       const output = '<center><h3>You have a new contact request</h3> </center> <br> <h2>Contact Details</h2> <br>' +
       '<ul>'+
