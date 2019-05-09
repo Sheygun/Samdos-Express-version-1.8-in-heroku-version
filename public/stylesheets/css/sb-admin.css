@@ -37,7 +37,7 @@ body {
 /* Top Navigation */
 
 .top-nav {
-    padding: 0 15px;
+    padding: 0 10px;
 }
 
 .top-nav>li {
@@ -48,7 +48,7 @@ body {
 .top-nav>li>a {
     padding-top: 15px;
     padding-bottom: 15px;
-    line-height: 20px;
+    line-height: 15px;
     color: #999;
 }
 

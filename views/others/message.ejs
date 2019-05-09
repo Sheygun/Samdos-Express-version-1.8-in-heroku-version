@@ -31,16 +31,16 @@
             </ol>
             <%- include ../partial/extra %>
 
-            <div class=" ">
+            <div>
 
                 <div class="row">
-                    <div class="col-md-7 mx-auto">
-                            <form id="contact-form" class="text-center border border-light p-5">
+                    <div class="col-md-8 mx-auto">
+                            <form method="POST" action="send" id="contact-form" class="text-center border border-light px-5">
                                     <p class="h3 mb-4">Contact us</p>
 
-                                    <div class="alert alert-info alert-dismissable" id="notify" style="display: none;">
+                                    <div class="alert alert-danger alert-dismissable" id="notify" style="display: none;">
                                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                                            <h4 id="status"></h4>
+                                            <h5 id="status"></h6>
                                         </div>
 
                                     <input type="text" id="defaultContactFormName"  name="name" class="form-control mb-4" style="height: 50px;" placeholder="Name">
