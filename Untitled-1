@@ -2,12 +2,25 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const nodemailer = require('nodemailer')
 const smtpTransport = require('nodemailer-smtp-transport')
+const { check, validationResult } = require('express-validator/check');
 const path = require('path')
 const PORT = process.env.PORT || 5000
 
+var createError = require('http-errors')
+var cookieParser = require('cookie-parser')
+var logger = require('morgan')
 
+const mongoose = require('mongoose')
+mongoose.connect('mongodb://localhost:27017/Samdos')
+
+let models = require('./models/contact')
 
 express()
+.use(logger('dev'))
+.use(express.json())
+.use(express.urlencoded({ extended: false }))
+.use(cookieParser())
+
   .use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
@@ -57,63 +70,56 @@ express()
     res.render('others/message', { title: 'Express' })
   })
 
-  .post('/send', function(req, res) {
+  .post('/send', function(req, res, next) {
+    res.render('others/message', { title: 'Express' })
+      const output = '<center><h3>You have a new contact request</h3> </center> <br> <h2>Contact Details</h2> <br>' +
+      '<ul>'+
+        '<li>Name: '+req.body.name +' </li>'+
+        '<li>Phone Number : '+req.body.phoneNumber +'</li>' +
+        '<li>Email : '+ req.body.email + '</li>' +
+        '<li>Feedback : '+ req.body.feedback + '</li> <br>' +
+        '</ul>' +
+
+        '<h2>Messages <br></h2>' +
+        '<h4>' + req.body.message + '</h4>'
 
 
-    const output = '<center><h3>You have a new contact request</h3> </center> <br> <h2>Contact Details</h2> <br>' +
-    '<ul>'+
-      '<li>Name: '+req.body.name +' </li>'+
-      '<li>Phone Number : '+req.body.phoneNumber +'</li>' +
-      '<li>Email : '+ req.body.email + '</li>' +
-      '<li>Feedback : '+ req.body.feedback + '</li> <br>' +
-      '</ul>' +
 
-      '<h2>Messages <br></h2>' +
-      '<h4>' + req.body.message + '</h4>'
+      let transporter = nodemailer.createTransport({
+      host: 'smtp.gmail.com',
+      port: 465,
+      secure: true,
+        auth: {
+          user: 'hollasheg@gmail.com', // generated ethereal user
+          pass: 'Oluwasegun12' // generated ethereal password
+        },
+
+        tls:{
+          rejectUnauthorized: false
+        }
+
+      })
 
 
-
-    let transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 465,
-    secure: true,
-      auth: {
-        user: 'hollasheg@gmail.com', // generated ethereal user
-        pass: 'Oluwasegun12' // generated ethereal password
-      },
-
-      tls:{
-        rejectUnauthorized: false
+      let mailOptions = {
+        from: req.body.name,
+        to: '"hollasheg" <hollasheg@gmail.com>',
+        subject: "Samdos Contact Request",
+        text: req.body.message,
+        html: output
       }
 
-    })
-    nodemailer
 
-
-    let mailOptions = {
-      from: req.body.name,
-      to: '"hollasheg" <hollasheg@gmail.com>',
-      subject: "Samdos Contact Request",
-      text: req.body.message,
-      html: output
-    }
-
-
-      transporter.sendMail(mailOptions, (err, info) => {
-        if (error) {
-            return console.log(err);
-        } else{
-          console.log('Message sent: ' + info.response);
-        }
-    });
-
-
-
-
+        transporter.sendMail(mailOptions, (error, info) => {
+          if (error) {
+              return console.log(err);
+          } else{
+            console.log("Message sent: %s", info.messageId);
+            console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+            // res.redirect('/message')
+          }
+      })
   })
-
-
-
 
 
 
@@ -337,3 +343,55 @@ express()
 
 
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
+
+
+
+
+
+ const output = '<center><h3>You have a new contact request</h3> </center> <br> <h2>Contact Details</h2> <br>' +
+      '<ul>'+
+        '<li>Name: '+req.body.name +' </li>'+
+        '<li>Phone Number : '+req.body.phoneNumber +'</li>' +
+        '<li>Email : '+ req.body.email + '</li>' +
+        '<li>Feedback : '+ req.body.feedback + '</li> <br>' +
+        '</ul>' +
+
+        '<h2>Messages <br></h2>' +
+        '<h4>' + req.body.message + '</h4>'
+
+
+
+      let transporter = nodemailer.createTransport({
+      host: 'smtp.gmail.com',
+      port: 465,
+      secure: true,
+        auth: {
+          user: 'hollasheg@gmail.com', // generated ethereal user
+          pass: 'Oluwasegun12' // generated ethereal password
+        },
+
+        tls:{
+          rejectUnauthorized: false
+        }
+
+      })
+
+
+      let mailOptions = {
+        from: req.body.name,
+        to: '"hollasheg" <hollasheg@gmail.com>',
+        subject: "Samdos Contact Request",
+        text: req.body.message,
+        html: output
+      }
+
+
+        transporter.sendMail(mailOptions, (error, info) => {
+          if (error) {
+              return console.log(err);
+          } else{
+            console.log("Message sent: %s", info.messageId);
+            console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+            // res.redirect('/message')
+          }
+      })

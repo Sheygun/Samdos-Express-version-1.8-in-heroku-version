@@ -37,7 +37,7 @@ body {
 /* Top Navigation */
 
 .top-nav {
-    padding: 0 5px;
+    padding: 0 10px;
 }
 
 .top-nav>li {
@@ -46,10 +46,9 @@ body {
 }
 
 .top-nav>li>a {
-    font-size: 11px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    line-height: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 15px;
     color: #999;
 }
 
@@ -106,6 +105,7 @@ ul.alert-dropdown {
 /* Side Navigation */
 
 @media(min-width:768px) {
+
     .side-nav {
         position: fixed;
         top: 51px;
@@ -218,3 +218,8 @@ ul.alert-dropdown {
 .panel-yellow > a:hover {
     color: #df8a13;
 }
+
+@media screen and (max-width: 868px) {
+    .top-nav>li>a {
+        font-size: 11px;}
+  }
