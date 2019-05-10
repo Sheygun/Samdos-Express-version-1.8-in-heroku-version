@@ -16,7 +16,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h3 class="page-header">
-                        Messages, Suggestions, Compliments and Complains
+                        Hire a Tutor Now
                     </h3>
                 </div>
             </div>
@@ -26,7 +26,7 @@
                     <i class="fa fa-dashboard"></i>  <a href="/">Dashboard</a>
                 </li>
                 <li class="active">
-                    <i class="fa fa-envelope"></i> Message Us
+                    <i class="fa fa-users"></i> Hire a Tutor
                 </li>
             </ol>
             <%- include ../partial/extra %>
@@ -36,32 +36,49 @@
                 <div class="row">
                     <div class="col-md-8 mx-auto">
                             <form method="POST" action="send" id="contact-form" class="text-center border border-light py-5 px-3">
-                                    <p class="h3 mb-4">Contact us</p>
+                                    <p class="h3 mb-4">Submit Your Application Form</p>
 
                                     <div class="alert alert-danger alert-dismissable" id="notify" style="display: none;">
                                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                                             <h5 id="status"></h6>
                                         </div>
 
-                                    <input type="text" id="defaultContactFormName"  name="name" class="form-control mb-4" style="height: 50px;" placeholder="Full Name">
-                                    <input type="text" id="defaultContactFormPhone" name="phoneNumber" class="form-control mb-4" style="height: 50px;" placeholder="Phone Number">
-                                    <input type="email" id="defaultContactFormEmail" name="email" class="form-control mb-4"style="height: 50px;" placeholder="E-mail">
-                                    <label>Subject</label>
-                                    <select class="browser-default custom-select mb-4" id="feedback" name="feedback" style="height: 50px;">
-                                            <option value="" disabled>Choose option</option>
-                                            <option value="Feedback" selected>Feedback</option>
-                                            <option value="Suggestion">Suggestion</option>
-                                            <option value="Complain">Complain</option>
-                                            <option value="Advertise">Advertise</option>
-                                            <option value="Compliment">Compliment</option>
-                                    </select>
-                                    <div class="form-group">
-                                        <textarea class="form-control rounded-0" name="message" id="exampleFormControlTextarea2" style="height: 150px;" rows="3" placeholder="Message"></textarea>
-                                    </div>
-                                    <div class="custom-control custom-checkbox mb-4">
-                                        <input type="checkbox" class="custom-control-input" id="defaultContactFormCopy">
-                                    </div>
-                                    <a class="btn btn-primary btn-block" onclick="validateForm()"><span class="h4"><b>Send Message</b></span></a>
+                                    <input type="text" id="defaultContactFormName"  name="studentName" class="form-control mb-4" style="height: 50px;" placeholder="Full Name">
+                                    <input type="text" id="defaultContactFormPhone" name="StudentPhoneNumber" class="form-control mb-4" style="height: 50px;" placeholder="Phone Number">
+                                    <input type="email" id="defaultContactFormEmail" name="StudentEmail" class="form-control mb-4"style="height: 50px;" placeholder="E-mail">
+                                    <input type="text" id="defaultContactFormAddress" name="StudentAddress" class="form-control mb-4"style="height: 50px;" placeholder="Home Address">
+
+                                    <select class="browser-default custom-select mb-4" id="gender" name="gender" style="height: 50px;">
+                                        <option value="selectGender" selected>Choose Gender</option>
+                                        <option value="male" >Male</option>
+                                        <option value="female">Female</option>
+                                      </select>
+
+                                    <input type="text" id="defaultContactFormFaculty" name="StudentFaculty" class="form-control mb-4"style="height: 50px;" placeholder="Faculty">
+                                    <input type="text" id="defaultContactFormDept" name="StudentDept" class="form-control mb-4"style="height: 50px;" placeholder="Department">
+                                    <input type="number" id="defaultContactFormLevel" name="StudentLevel" class="form-control mb-4"style="height: 50px;" placeholder="Level">
+                                    <input type="text" id="defaultContactFormCourse" name="StudentCourse" class="form-control mb-4"style="height: 50px;" placeholder="Subject(s)/Course Title(s) and Code(s)">
+
+                                    <select class="browser-default custom-select mb-4" id="days" name="days" style="height: 50px;">
+                                        <option value="selectDays" selected>Choose Preferred Type of Class</option>
+                                        <option value="private" >Private Class</option>
+                                        <option value="public">Public Class</option>
+                                      </select>
+
+                                    <select class="browser-default custom-select mb-4" id="days" name="days" style="height: 50px;">
+                                        <option value="selectDays" selected>Choose Preferred Days</option>
+                                        <option value="first" >Monday - Friday</option>
+                                        <option value="second">Saturday and Sunday</option>
+                                      </select>
+
+                                      <select class="browser-default custom-select mb-4" id="classTime" name="classTime" style="height: 50px;">
+                                        <option value="choose" selected>Choose Preferred Time</option>
+                                        <option value="one" >9am - 12pm</option>
+                                        <option value="two">3pm - 6pm</option>
+                                      </select>
+
+
+                                    <a class="btn btn-primary btn-block" onclick="validateForm()"><span class="h4"><b>Submit Form</b></span></a>
                                     <!-- <button class="btn btn-info btn-block" onsubmit="validateForm();"><span class="h4"><b>Send Message</b></span></button> -->
                                 </form>
                     </div>

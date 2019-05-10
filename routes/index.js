@@ -46,6 +46,10 @@ router.get('/', (req, res) => res.render('index'))
 
   router.post('/send', Controller.postSend)
 
+  router.get('/tutorform', function(req, res) {
+    res.render('others/tutorform', { title: 'Express' })
+  })
+
 // ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
   // =============================== Computer Science ===========================
