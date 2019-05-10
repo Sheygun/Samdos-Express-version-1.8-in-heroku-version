@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-// mongoose.connect('mongodb://localhost:27017/contact/lists');
+mongoose.connect('mongodb://localhost:27017/contact/lists');
 // const mongoURI = "mongodb://samdos:emmanuel1@ds123196.mlab.com:23196/samdos";
 // const db = mongoose.connect(mongoURI);
 
