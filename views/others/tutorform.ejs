@@ -35,7 +35,7 @@
 
                 <div class="row">
                     <div class="col-md-8 mx-auto">
-                            <form method="POST" action="send" id="contact-form" class="text-center border border-light py-5 px-3">
+                            <form method="POST" action="tutor" id="tutor-form" class="text-center border border-light py-5 px-3">
                                     <p class="h3 mb-4">Submit Your Application Form</p>
 
                                     <div class="alert alert-danger alert-dismissable" id="notify" style="display: none;">
@@ -49,37 +49,46 @@
                                     <input type="text" id="defaultContactFormAddress" name="StudentAddress" class="form-control mb-4"style="height: 50px;" placeholder="Home Address">
 
                                     <select class="browser-default custom-select mb-4" id="gender" name="gender" style="height: 50px;">
-                                        <option value="selectGender" selected>Choose Gender</option>
-                                        <option value="male" >Male</option>
-                                        <option value="female">Female</option>
+                                        <option value="selectGender" selected> -- Choose Gender -- </option>
+                                        <option value="Male" >Male</option>
+                                        <option value="Female">Female</option>
                                       </select>
 
                                     <input type="text" id="defaultContactFormFaculty" name="StudentFaculty" class="form-control mb-4"style="height: 50px;" placeholder="Faculty">
                                     <input type="text" id="defaultContactFormDept" name="StudentDept" class="form-control mb-4"style="height: 50px;" placeholder="Department">
-                                    <input type="number" id="defaultContactFormLevel" name="StudentLevel" class="form-control mb-4"style="height: 50px;" placeholder="Level">
+
+                                    <select class="browser-default custom-select mb-4" id="defaultContactFormLevel" name="StudentLevel" style="height: 50px;">
+                                      <option value="selectLevel" selected> -- Level -- </option>
+                                      <option value="100" >100</option>
+                                      <option value="200">200</option>
+                                      <option value="300">300</option>
+                                      <option value="400">400</option>
+                                      <option value="500">500</option>
+                                      <option value="others">Others</option>
+                                    </select>
+
                                     <input type="text" id="defaultContactFormCourse" name="StudentCourse" class="form-control mb-4"style="height: 50px;" placeholder="Subject(s)/Course Title(s) and Code(s)">
 
-                                    <select class="browser-default custom-select mb-4" id="days" name="days" style="height: 50px;">
-                                        <option value="selectDays" selected>Choose Preferred Type of Class</option>
-                                        <option value="private" >Private Class</option>
-                                        <option value="public">Public Class</option>
+                                    <select class="browser-default custom-select mb-4" id="classes" name="classes" style="height: 50px;">
+                                        <option value="selectClass" selected> -- Choose Preferred Type of Class --</option>
+                                        <option value="Private Class" >Private Class</option>
+                                        <option value="Public Class">Public Class</option>
                                       </select>
 
                                     <select class="browser-default custom-select mb-4" id="days" name="days" style="height: 50px;">
-                                        <option value="selectDays" selected>Choose Preferred Days</option>
-                                        <option value="first" >Monday - Friday</option>
-                                        <option value="second">Saturday and Sunday</option>
+                                        <option value="selectDays" selected> -- Choose Preferred Days -- </option>
+                                        <option value="Monday - Friday" >Monday - Friday</option>
+                                        <option value="Saturday - Sunday">Saturday and Sunday</option>
                                       </select>
 
                                       <select class="browser-default custom-select mb-4" id="classTime" name="classTime" style="height: 50px;">
-                                        <option value="choose" selected>Choose Preferred Time</option>
-                                        <option value="one" >9am - 12pm</option>
-                                        <option value="two">3pm - 6pm</option>
+                                        <option value="chooseTime"selected> -- Choose Preferred Time -- </option>
+                                        <option value="9am - 12am" >9am - 12pm</option>
+                                        <option value="3pm - 6pm">3pm - 6pm</option>
                                       </select>
 
 
-                                    <a class="btn btn-primary btn-block" onclick="validateForm()"><span class="h4"><b>Submit Form</b></span></a>
-                                    <!-- <button class="btn btn-info btn-block" onsubmit="validateForm();"><span class="h4"><b>Send Message</b></span></button> -->
+                                    <a class="btn btn-primary btn-block" onclick="validateForm2()"><span class="h4"><b>Submit Form</b></span></a>
                                 </form>
                     </div>
                 </div>
@@ -98,58 +107,6 @@
 
 
 <%- include ../partial/script %>
-
-<script>
-     function validateForm() {
-
-     let name =  document.getElementById('defaultContactFormName').value;
-  if (name == "") {
-        document.getElementById('notify').style.display = "block";
-      document.getElementById('status').innerHTML = "Name cannot be empty";
-      return false;
-  }else {
-    document.getElementById('notify').style.display = "none";
-  }
-
-  let phone =  document.getElementById('defaultContactFormPhone').value;
-  if (phone == "") {
-        document.getElementById('notify').style.display = "block";
-      document.getElementById('status').innerHTML = "Phone Number cannot be empty";
-      return false;
-  }
-
-  let email =  document.getElementById('defaultContactFormEmail').value;
-  if (email == "") {
-    document.getElementById('notify').style.display = "block";
-      document.getElementById('status').innerHTML = "Email cannot be empty";
-      return false;
-  }
-        else if (email != ""){
-      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      if(!re.test(email)){
-        document.getElementById('notify').style.display = "block";
-          document.getElementById('status').innerHTML = "Email format invalid";
-          return false;
-      }
-  }
-  else {
-    document.getElementById('notify').style.display = "none";
-  }
-
-  var message =  document.getElementById('exampleFormControlTextarea2').value;
-  if (message == "") {
-    document.getElementById('notify').style.display = "block";
-      document.getElementById('status').innerHTML = "Message cannot be empty";
-      return false;
-  } else {
-    document.getElementById('notify').style.display = "none";
-  }
-    document.getElementById('notify').style.display = "block";
-  document.getElementById('status').innerHTML = "Sending...";
-  document.getElementById('contact-form').submit();
-
-  }
-</script>
 
 </body>
 
