@@ -15,9 +15,9 @@ var usersRouter = require('./routes/users')
 
 
 const mongoose = require('mongoose')
-// mongoose.connect('mongodb://localhost:27017/Samdos')
+mongoose.connect('mongodb://localhost:27017/Samdos')
 
-const mongoURI = "mongodb://samdos:emmanuel1@ds123196.mlab.com:23196/samdos";
+// const mongoURI = "mongodb://samdos:emmanuel1@ds123196.mlab.com:23196/samdos";
 
 
 express()

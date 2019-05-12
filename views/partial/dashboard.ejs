@@ -97,7 +97,7 @@
                     <a href="/timetable"><i class="fa fa-fw fa-table"></i> Timetable</a>
                 </li> -->
                 <li>
-                    <a data-toggle="modal" data-target="#basicExampleModal4"><i class="fa fa-fw fa-files-o"></i> Past Questions & Solutions</a>
+                    <a data-toggle="modal" data-target="#basicExampleModal4"><i class="fa fa-fw fa-files-o"></i> Students' Forum</a>
                 </li>
                 <!-- <li>
                         <a onclick="alert('Currently on Process');"><i class="fa fa-fw fa-pencil">Solutions</i> </a>
@@ -172,7 +172,7 @@
                     <a href="/tutorform"><i class="fa fa-fw fa-users"></i>  Hire a Tutor</a>
                 </li>
                 <li>
-                    <a href="http://samdos.herokuapp.com/tutorial"><i class="fa fa-fw fa-code"></i>Hire a Website Developer</a>
+                    <a href="http://samdos.herokuapp.com/tutorial"><i class="fa fa-fw fa-code"></i>Learn Coding</a>
                 </li>
             </ul>
         </div>
@@ -185,7 +185,7 @@
             <div class="modal-dialog modal-md" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h4 class="modal-title w-100 font-weight-bold">PAST QUESTIONS AND SOLUTIONS</h4>
+                  <h4 class="modal-title w-100 font-weight-bold text-center">STUDENTS' FORUM</h4>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
@@ -195,16 +195,14 @@
                 <div class="modal-body">
                         <center class=""> <br>
                             <form action="">
-                                        <h6 class="red-text">This section is for General Studies</h6>
-                                    <select class="browser-default custom-select myselect mb-3" id="general">
-                                            <option class="myoption" value="general">-- General Studies --</option>
-                                            <option class="myoption" value="100">100 Level</option>
-                                            <option class="myoption" value="200">200 Level</option>
-                                            <option class="myoption" value="300">300 Level</option>
-                                     </select>  <br> <hr class="" style="border-top: 2px solid rgb(111, 109, 109); border-style: dashed"> <br>
 
+                                <select class="browser-default custom-select myselect" id="institution">
+                                    <option selected class="myoption" value="institution">-- Select Institution --</option>
+                                    <option class="myoption" value="lasu">Lagos State University</option>
 
-                                <select class="browser-default custom-select myselect" id="selectObj">
+                                  </select> <br> <br>
+
+                                <select class="browser-default custom-select myselect" disabled id="selectObj">
                                     <option selected class="myoption" value="faculty">-- Select Faculty --</option>
                                     <option class="myoption" value="science">Science</option>
                                     <option class="myoption" value="art">Art</option>

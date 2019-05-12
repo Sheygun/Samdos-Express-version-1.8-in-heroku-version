@@ -49,7 +49,13 @@
   }
 
 
-
+  function agreeds(){
+    if (document.getElementById('agreed').checked){
+        let dismiss = document.getElementById('submitForm').style.display = "block";
+    }else{
+        let dismiss = document.getElementById('submitForm').style.display = "none";
+    }
+  }
 
      function validateForm2() {
 // ================================= Name ====================================
@@ -77,7 +83,15 @@
       document.getElementById('status').innerHTML = "Email cannot be empty";
       return false;
   }
-        else if (email != ""){
+        else if (email != ""){function agreeds(){
+          alert('goal');
+          // let lasu = document.getElementById('agreed');
+          // if (document.getElementById('agreed').checked){
+          //     let dismiss = document.getElementById('submitForm').style.display = "block";
+          // }else{
+          //     let dismiss = document.getElementById('submitForm').style.display="hidden";
+          // }
+        }
       var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       if(!re.test(email)){
         document.getElementById('notify').style.display = "block";
@@ -182,9 +196,20 @@ let classTime =  document.getElementById('classTime').value;
     document.getElementById('notify').style.display = "none";
   }
 
+  // function agreeds(){
+    // alert('goal');
+    // let lasu = document.getElementById('agreed');
+    // if (document.getElementById('agreed').checked){
+    //     let dismiss = document.getElementById('submitForm').style.display = "block";
+    // }else{
+    //     let dismiss = document.getElementById('submitForm').style.display="hidden";
+    // }
+  // }
+
 
   document.getElementById('notify').style.display  = "block";
   document.getElementById('status').innerHTML = "Sending...";
   document.getElementById('tutor-form').submit();
 
   }
+
