@@ -46,6 +46,22 @@ option{
     margin: 30px 50px;
 }
 
+        /* Notice Board */
+.notice{
+    height: 450px; width: auto;
+    background: rgb(161, 50, 10);
+    border: 10px solid black;
+    border-radius: 10px;
+}.notice>h3{
+    line-height: 40px;
+    text-align: left;
+}
+
+
+
+
+
+
 
 
   /*-- bottom-to-top --*/
