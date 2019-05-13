@@ -340,3 +340,124 @@ express()
 
 
 this is working perfectly.
+
+
+
+
+<head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta name = "theme-color" content="#404040">
+        <meta name = "msapplication-navbutton-color" content="#404040">
+        <meta name = "apple-mobile-web-app-status-bar-style" content="#404040">
+
+        <title>Samdos Express Technology ::: designed by Sheygun</title>
+        <link rel="shortcut icon" href="stylesheets/images/logo.jpg">
+
+
+        <link href="stylesheets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+        <!-- <link href="stylesheets/css/bootstrap.min.css" rel="stylesheet"> temporarily cond -->
+
+        <link href="stylesheets/css/mdb.min.css" rel="stylesheet">
+        <link href="stylesheets/css/mdb.css" rel="stylesheet">
+
+        <link href="stylesheets/css/sb-admin.css" rel="stylesheet">
+        <link rel="stylesheet" href="stylesheets/css/style.css">
+
+        <link href="stylesheets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+              <link rel="stylesheet" href="stylesheets/css/animate.css">
+              <link rel="stylesheet" href="stylesheets/css/media-queries.css">
+              <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+              <link rel="stylesheet" type="text/css" href="stylesheets/css/switcher.css" media="screen" />
+              <link rel="stylesheet" href="stylesheets/css/fractionslider.css"/>
+              <link rel="stylesheet" href="stylesheets/css/style-fraction.css"/>
+              <link rel="stylesheet" href="stylesheets/css/lightbox.css">
+
+              <script src="stylesheets/js/jquery-1.11.1.min.js"></script>
+
+    </head>
+
+
+
+
+
+        <script src="stylesheets/js/jquery.js"></script>
+
+      <script src="stylesheets/js/extra/javascript.js" type="text/javascript"></script>
+      <script src="stylesheets/js/extra/solution.js" type="text/javascript"></script>
+      <script src="stylesheets/js/extra/message.js" type="text/javascript"></script>
+      <script src="stylesheets/js/extra/auth.js" type="text/javascript"></script>
+
+      <script type="text/javascript" src="stylesheets/js/extra/bootstrap.js" ></script>
+      <script type="text/javascript" src="stylesheets/js/jquery-3.3.1.min.js"></script>
+      <script type="text/javascript" src="stylesheets/js/popper.min.js"></script>
+      <script type="text/javascript" src="stylesheets/js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="stylesheets/js/mdb.min.js"></script>
+
+            <script src="stylesheets/js/jquery.backstretch.min.js"></script>
+            <script src="stylesheets/js/wow.min.js"></script>
+            <script src="stylesheets/js/retina-1.1.0.min.js"></script>
+            <script type="text/javascript" src="stylesheets/js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="stylesheets/js/styleswitch.js"></script>
+    <script src="stylesheets/js/jquery.fractionslider.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="stylesheets/js/jquery.smartmenus.min.js"></script>
+    <!-- <script type="text/javascript" src="stylesheets/js/jquery.smartmenus.bootstrap.min.js"></script> -->
+    <script type="text/javascript" src="stylesheets/js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="stylesheets/js/jflickrfeed.js"></script>
+    <script type="text/javascript" src="stylesheets/js/jquery.magnific-popup.min.js"></script>
+    <script type="text/javascript" src="stylesheets/js/jquery.isotope.min.js"></script>
+    <script type="text/javascript" src="stylesheets/js/jquery.easypiechart.min.js"></script>
+    <script type="text/javascript" src="stylesheets/js/swipe.js"></script>
+    <script type="text/javascript" src="stylesheets/js/jquery-scrolltofixed-min.js"></script>
+    <script type="text/javascript" src="stylesheets/js/jquery.matchHeight-min.js"></script>
+    <script src="stylesheets/js/SmoothScroll.min.js"></script>
+
+    <script>
+        new WOW().init();
+    </script>
+
+
+<script src="stylesheets/js/move-top.js"></script>
+<script src="stylesheets/js/easing.js"></script>
+<script>
+
+  jQuery(document).ready(function ($) {
+    $(".scrolled").click(function (event) {
+      event.preventDefault();
+      $('html,body').animate({
+        scrollTop: $(this.hash).offset().top
+      }, 900);
+    });
+  });
+</script>
+<!-- start-smoth-scrolling -->
+
+
+<!-- here stars scrolling icon -->
+<script>
+    $(document).ready(function () {
+
+      var defaults = {
+        containerID: 'toTop', // fading element id
+        containerHoverID: 'toTopHover', // fading element hover id
+        scrollSpeed: 1200,
+        easingType: 'linear'
+      };
+
+
+      $().UItoTop({
+        easingType: 'easeOutQuart'
+      });
+
+    });
+  </script>
+<!-- //here ends scrolling icon -->
+
+    </body>
+</html>

@@ -1,5 +1,6 @@
 let models = require('../models/contactSchema')
 let tutorList = require('../models/tutorDatabase')
+let dev = require('../models/devDatabase')
 
   exports.preSend = function(req, res, next){
     res.render('others/message', { title: 'Express' })
@@ -41,5 +42,24 @@ exports.tutor = function(req, res, next){
     classTime: req.body.classTime
   }
   let data = new tutorList(Students);
+  data.save();
+};
+
+exports.postDev = function(req, res, next){
+  res.render('others/developer', { title: 'Express' })
+
+  console.log(req.body)
+  let developer = {
+    Name: req.body.devName,
+    PhoneNumber: req.body.devPhone,
+    Email: req.body.devEmail,
+    Address: req.body.devAddress,
+    Gender: req.body.devGender,
+    DevType: req.body.devType,
+    Duration: req.body.devDuration,
+    Quality: req.body.devQuality,
+    Learn: req.body.devLearn
+  }
+  let data = new dev(developer);
   data.save();
 };

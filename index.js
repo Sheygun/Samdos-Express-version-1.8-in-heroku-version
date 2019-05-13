@@ -14,9 +14,9 @@ var usersRouter = require('./routes/users')
 
 
 const mongoose = require('mongoose')
-mongoose.connect('mongodb://localhost:27017/Samdos')
+// mongoose.connect('mongodb://localhost:27017/Samdos')
 
-// const mongoURI = "mongodb://samdos:emmanuel1@ds123196.mlab.com:23196/samdos";
+const mongoURI = "mongodb://samdos:emmanuel1@ds123196.mlab.com:23196/samdos";
 
 
 express()
@@ -32,11 +32,6 @@ express()
 
   .use('/', indexRouter)
   // .use('/users', usersRouter)
-
-
-  // Body Parser Middleware
-  // .use(bodyParser.urlencoded({ extended: false}))
-  // .use(bodyParser.json())
 
   .use(function(req, res, next) {
     next(createError(404));

@@ -59,6 +59,8 @@ router.get('/', (req, res) => res.render('index'))
   router.get('/developer', function(req, res) {
     res.render('others/developer', { title: 'Express' })
   })
+
+  router.post('/developer', Controller.postDev)
 // ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
   // =============================== Computer Science ===========================

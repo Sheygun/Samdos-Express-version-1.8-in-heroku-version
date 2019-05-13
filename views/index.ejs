@@ -3,6 +3,17 @@
 
 <%- include partial/head %>
 
+<head>
+        <script>
+            $(document).ready(function(){
+                setTimeout(function(){
+                    $('#basicExampleModal123').modal('show');
+                }, 3000);
+            });
+
+       </script>
+       </head>
+
 <body>
 
     <div id="wrapper">
@@ -25,6 +36,8 @@
                 </div>
 
                 <%- include partial/extra %>
+
+
 
                 <div class="row">
 
@@ -102,7 +115,7 @@
                 <div class="row" style="margin: 40px 0px;">
                     <div class="col-md-12">
 
-                        <h1 class="h3 red-text text-center">See Latest Updates and Posts</h1>
+                        <h1 class="h3-responsive red-text text-center">See Latest Updates and Posts</h1>
 
                         <table class="table text-center white table-hover" style="border-radius: 10px;" data-wow-duration="3s">
                             <tbody class="">
@@ -122,8 +135,6 @@
 
 
 
-
-
     <!-- =============================================================== footer ============================================================ -->
     <div style="height: 30px;"></div>
 <%- include partial/footer %>
@@ -133,11 +144,30 @@
 
     </div>
 
+    <div class="modal fade" id="basicExampleModal123" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  ...
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
 
 
+</body>
 
 <%- include partial/script %>
 
-</body>
 
 </html>

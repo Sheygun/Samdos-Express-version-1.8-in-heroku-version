@@ -30,6 +30,7 @@
           return false;
       }
   }
+
   else {
     document.getElementById('notify').style.display = "none";
   }
@@ -57,6 +58,18 @@
     }
   }
 
+
+
+  function agreeds2(){
+    if (document.getElementById('agreed2').checked){
+        let dismiss = document.getElementById('submitForm2').style.display = "block";
+    }else{
+        let dismiss = document.getElementById('submitForm2').style.display = "none";
+    }
+  }
+
+
+
      function validateForm2() {
 // ================================= Name ====================================
      let name =  document.getElementById('defaultContactFormName').value;
@@ -83,22 +96,15 @@
       document.getElementById('status').innerHTML = "Email cannot be empty";
       return false;
   }
-        else if (email != ""){function agreeds(){
-          alert('goal');
-          // let lasu = document.getElementById('agreed');
-          // if (document.getElementById('agreed').checked){
-          //     let dismiss = document.getElementById('submitForm').style.display = "block";
-          // }else{
-          //     let dismiss = document.getElementById('submitForm').style.display="hidden";
-          // }
-        }
-      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      if(!re.test(email)){
-        document.getElementById('notify').style.display = "block";
-          document.getElementById('status').innerHTML = "Email format invalid";
-          return false;
-      }
-  }
+  else if (email != ""){
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if(!re.test(email)){
+      document.getElementById('notify').style.display = "block";
+        document.getElementById('status').innerHTML = "Email format invalid";
+        return false;
+    }
+}
+
   else {
     document.getElementById('notify').style.display = "none";
   }
@@ -196,20 +202,123 @@ let classTime =  document.getElementById('classTime').value;
     document.getElementById('notify').style.display = "none";
   }
 
-  // function agreeds(){
-    // alert('goal');
-    // let lasu = document.getElementById('agreed');
-    // if (document.getElementById('agreed').checked){
-    //     let dismiss = document.getElementById('submitForm').style.display = "block";
-    // }else{
-    //     let dismiss = document.getElementById('submitForm').style.display="hidden";
-    // }
-  // }
-
-
   document.getElementById('notify').style.display  = "block";
   document.getElementById('status').innerHTML = "Sending...";
   document.getElementById('tutor-form').submit();
 
   }
 
+  // ========================================================= developer ===============================================================
+  // ======================================================================================================================================
+
+
+
+
+  function validateForm3() {
+    // ================================= Name ====================================
+         let name =  document.getElementById('devName').value;
+      if (name == "") {
+            document.getElementById('notify').style.display = "block";
+          document.getElementById('status').innerHTML = "Name cannot be empty";
+          return false;
+      }else {
+        document.getElementById('notify').style.display = "none";
+      }
+    // ============================== Phone Number ================================
+      let phone =  document.getElementById('devPhone').value;
+      if (phone == "") {
+            document.getElementById('notify').style.display = "block";
+          document.getElementById('status').innerHTML = "Phone Number cannot be empty";
+          return false;
+      }else {
+        document.getElementById('notify').style.display = "none";
+      }
+    // ================================== Email ========================
+    let email =  document.getElementById('devEmail').value;
+    if (email == "") {
+      document.getElementById('notify').style.display = "block";
+        document.getElementById('status').innerHTML = "Email cannot be empty";
+        return false;
+    }
+    else if (email != ""){
+      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      if(!re.test(email)){
+        document.getElementById('notify').style.display = "block";
+          document.getElementById('status').innerHTML = "Email format invalid";
+          return false;
+      }
+  }
+
+    else {
+      document.getElementById('notify').style.display = "none";
+    }
+
+    // ========================== Address ==========================================
+
+      let address =  document.getElementById('devAddress').value;
+      if (address == "") {
+            document.getElementById('notify').style.display = "block";
+          document.getElementById('status').innerHTML = "Address cannot be empty";
+          return false;
+      }else {
+        document.getElementById('notify').style.display = "none";
+      }
+    // =============================== Gender ==================================
+
+    let gender =  document.getElementById('devGender').value;
+      if (gender == "selectGender") {
+            document.getElementById('notify').style.display = "block";
+          document.getElementById('status').innerHTML = "Please Select Your Gender";
+          return false;
+      }else {
+        document.getElementById('notify').style.display = "none";
+      }
+
+      // ============================== devType ================================
+      let level =  document.getElementById('devType').value;
+      if (level == "selectType") {
+            document.getElementById('notify').style.display = "block";
+          document.getElementById('status').innerHTML = "Please Select the type of Class";
+          return false;
+      }else {
+        document.getElementById('notify').style.display = "none";
+      }
+
+       // ============================== devDuration ================================
+      let devDuration =  document.getElementById('devDuration').value;
+      if (devDuration == "selectDuration") {
+            document.getElementById('notify').style.display = "block";
+          document.getElementById('status').innerHTML = "Please Select the Duration of the Project";
+          return false;
+      }else {
+        document.getElementById('notify').style.display = "none";
+      }
+
+    // =============================== devQuality ==================================
+
+    let devQuality =  document.getElementById('devQuality').value;
+      if (devQuality == "selectQuality") {
+            document.getElementById('notify').style.display = "block";
+          document.getElementById('status').innerHTML = "Please Select the Type of Quality ";
+          return false;
+      }else {
+        document.getElementById('notify').style.display = "none";
+      }
+
+      // =============================== devLearn ==================================
+
+    let devLearn =  document.getElementById('devLearn').value;
+      if (devLearn == "selectLearn") {
+            document.getElementById('notify').style.display = "block";
+          document.getElementById('status').innerHTML = "Please Fll in the form Properly";
+          return false;
+      }else {
+        document.getElementById('notify').style.display = "none";
+      }
+
+
+      document.getElementById('notify').style.display  = "block";
+      document.getElementById('status').innerHTML = "Sending...";
+      document.getElementById('dev-form').submit();
+
+      }
