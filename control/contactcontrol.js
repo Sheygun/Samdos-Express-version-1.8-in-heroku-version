@@ -1,6 +1,10 @@
 let models = require('../models/contactSchema')
 let tutorList = require('../models/tutorDatabase')
 
+  exports.preSend = function(req, res, next){
+    res.render('others/message', { title: 'Express' })
+  };
+
   exports.postSend = function(req, res, next){
     res.render('others/message', { title: 'Express' })
 
@@ -12,8 +16,10 @@ let tutorList = require('../models/tutorDatabase')
       Feedbacks: req.body.feedback,
       Messages: req.body.message,
     }
-    let data = new models(Contact);
-    data.save();
+    let data = new models(Contact)
+    data.save()
+    // res.redirect('/contact')
+    // console.log('successful')
 };
 
 exports.tutor = function(req, res, next){

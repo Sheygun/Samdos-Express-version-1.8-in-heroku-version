@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include ../partial/head %>
+
+<body>
+
+    <div id="wrapper">
+
+
+            <%- include ../partial/dashboard %>
+    <!-- ======================================================== main page ===================================================================== -->
+    <div id="page-wrapper">
+
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="page-header">
+                        Hire a Web Developer
+                    </h3>
+                </div>
+            </div>
+
+            <ol class="breadcrumb">
+                <li>
+                    <i class="fa fa-dashboard"></i>  <a href="/">Dashboard</a>
+                </li>
+                <li class="active">
+                    <i class="fa fa-hand-o-right"></i> Hire a Web Developer
+                </li>
+            </ol>
+            <%- include ../partial/extra %>
+
+            <div>
+
+                <div class="row">
+                    <div class="col-md-8 mx-auto">
+                            <form method="POST" action="tutor" id="tutor-form" class="text-center border border-light py-5 px-3">
+                                    <p class="h3 mb-4">Submit Your Application Form</p>
+
+                                    <div class="alert alert-danger alert-dismissable" id="notify" style="display: none;">
+                                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                            <h5 id="status"></h6>
+                                        </div>
+
+                                    <input type="text" id="devName"  name="devName" class="form-control mb-4" style="height: 50px;" placeholder="Full Name">
+                                    <input type="text" id="devPhone" name="devPhone" class="form-control mb-4" style="height: 50px;" placeholder="Phone Number">
+                                    <input type="email" id="devEmail" name="devEmail" class="form-control mb-4"style="height: 50px;" placeholder="E-mail">
+                                    <input type="text" id="devAddress" name="devAddress" class="form-control mb-4"style="height: 50px;" placeholder="Home Address">
+
+                                    <select class="browser-default custom-select mb-4" id="devGender" name="devGender" style="height: 50px;">
+                                        <option value="selectGender" selected> -- Choose Gender -- </option>
+                                        <option value="Male" >Male</option>
+                                        <option value="Female">Female</option>
+                                      </select>
+
+                                    <select class="browser-default custom-select mb-4" id="devType" name="devType" style="height: 50px;">
+                                      <option value="selectType" selected> -- Select Type of Website -- </option>
+                                      <option value="Personal" >Personal Website</option>
+                                      <option value="Commercial">Commercial Website</option>
+                                      <option value="Blogging">Blogging Website</option>
+                                      <option value="Information">Information Website</option>
+                                      <option value="Entertainment">Entertainment Website</option>
+                                      <option value="Business">Business Website</option>
+                                      <option value="Port Folio">Port Folio Website</option>
+                                      <option value="Educational">Educational Website</option>
+                                    </select>
+
+                                    <select class="browser-default custom-select mb-4" id="devDuration" name="devDuration" style="height: 50px;">
+                                            <option value="selectDuration" selected> -- Preferred Duration of Project -- </option>
+                                            <option value="Male" >1 Month</option>
+                                            <option value="Female">3 Month</option>
+                                            <option value="Female">6 Month</option>
+                                            <option value="Female">12 Month</option>
+                                          </select>
+
+                                        <select class="browser-default custom-select mb-4" id="devQuality" name="devQuality" style="height: 50px;">
+                                            <option value="selectQuality" selected> -- Select Quality of the Project -- </option>
+                                            <option value="Starter" >Starter</option>
+                                            <option value="Classic">Classic</option>
+                                            <option value="Ultimate">Ultimate</option>
+                                          </select>
+
+                                         <select class="browser-default custom-select mb-4" id="devLearn" name="devLearn" style="height: 50px;">
+                                            <option value="selectLearn" selected> -- Do you wsh to learn Web Development -- </option>
+                                            <option value="Yes" >Yes</option>
+                                            <option value="No">No</option>
+                                          </select>
+
+
+
+                                      <div class="checkbox">
+                                        <label class="font-weight-bold"><input type="checkbox" value="" id="agreed2" onclick="agreeds();">I AGREED TO SAMDOS TERMS AND CONDITIONS</label>
+
+
+
+                                    <a class="btn btn-primary btn-block" style="display: none;" id="submitForm2"  onclick="validateForm3()"><span class="h4"><b>Submit Form</b></span></a>
+                                </form>
+                    </div>
+                </div>
+            </div>
+
+    <!-- =============================================================== footer ============================================================ -->
+    <div style="height: 30px;"></div>
+<%- include ../partial/footer %>
+
+    </div>
+        </div>
+
+    </div>
+
+
+
+
+<%- include ../partial/script %>
+
+</body>
+
+</html>

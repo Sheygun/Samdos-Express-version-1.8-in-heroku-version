@@ -44,12 +44,21 @@ router.get('/', (req, res) => res.render('index'))
     res.render('others/message', { title: 'Express' })
   })
 
-  router.post('/send', Controller.postSend)
+  router.get('/message', Controller.preSend)
+  router.post('/message', Controller.postSend)
 
   router.get('/tutorform', function(req, res) {
     res.render('others/tutorform', { title: 'Express' })
   })
   router.post('/tutor', Controller.tutor)
+
+  router.get('/available', function(req, res) {
+    res.render('others/available', { title: 'Express' })
+  })
+
+  router.get('/developer', function(req, res) {
+    res.render('others/developer', { title: 'Express' })
+  })
 // ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
   // =============================== Computer Science ===========================

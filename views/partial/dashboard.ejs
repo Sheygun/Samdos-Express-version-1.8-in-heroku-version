@@ -93,9 +93,6 @@
                 <li class="">
                     <a href="/"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                 </li>
-                <!-- <li>
-                    <a href="/timetable"><i class="fa fa-fw fa-table"></i> Timetable</a>
-                </li> -->
                 <li>
                     <a data-toggle="modal" data-target="#basicExampleModal4"><i class="fa fa-fw fa-files-o"></i> Students' Forum</a>
                 </li>
@@ -171,6 +168,9 @@
                 <li>
                     <a href="/tutorform"><i class="fa fa-fw fa-users"></i>  Hire a Tutor</a>
                 </li>
+                 <li>
+                    <a href="/developer"><i class="fa fa-fw fa-hand-o-right"></i>  Hire a Web Developer</a>
+                </li>
                 <li>
                     <a href="http://samdos.herokuapp.com/tutorial"><i class="fa fa-fw fa-code"></i>Learn Coding</a>
                 </li>
@@ -236,6 +236,12 @@
                                             <option class="myoption" value="500">500</option>
                                             <!-- <option class="myoption" value="others">Others</option> -->
                                           </select> <br> <br>
+
+                                          <div class="alert alert-danger alert-dismissable" id="amb" style="display: none;" onclick="window.location.replace('/available');" style="cursor:pointer">
+                                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                            <h5>See lists of Available Materials and Ambassadors</h5>
+                                        </div>
+
                             </form>
                            </center>
                            <div class="modal-footer d-flex justify-content-center">

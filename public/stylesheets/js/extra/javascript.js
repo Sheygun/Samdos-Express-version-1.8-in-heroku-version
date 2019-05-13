@@ -4,13 +4,16 @@ level = document.getElementById('selectObj3'),
 check = document.getElementById('clickme'),
 general = document.getElementById('general'),
 institution = document.getElementById('institution');
+ambassador = document.getElementById('amb');
 
 institution.onchange = function(){
     if(institution.value == "lasu"){
         faculty.disabled = false;
+        ambassador.style.display = "block";
     }else {
         faculty.disabled = true;
         check.disabled = true;
+        ambassador.style.display = "none";
     }
 }
 
@@ -122,7 +125,7 @@ faculty.onchange = function(){
         department.options[6].style.display = 'none';
         department.options[7].style.display = 'none';
         department.options[8].style.display = 'none';
-        department.options[9].style.display = 'none';
+        department.options[9].style.display = 'none';block
 
         department.options[1].value = '';
         department.options[2].value = '';
@@ -144,7 +147,7 @@ faculty.onchange = function(){
         department.disabled = false;
         department.options[1].innerHTML = 'Accounting & Finance';
         department.options[2].innerHTML = 'Business Admin & Mgt Tech';
-        department.options[3].innerHTML = 'BUSINESS LAW';
+        department.options[3].innerHTML = 'Business Law';
         department.options[4].innerHTML = 'Industial R. & Pub. Admin';
         department.options[5].style.display = 'none';
         department.options[6].style.display = 'none';
