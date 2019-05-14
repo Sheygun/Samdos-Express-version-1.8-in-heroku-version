@@ -3,7 +3,84 @@ body{
     font-family: 'Montserrat', sans-serif;
     margin: 0%;
     padding: 0%;
+    -webkit-transition: background-color 1s;
+    transition: background-color 1s;
 }
+
+
+
+#preloader {
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+}
+
+/*Battery*/
+.loder-box {
+  background-color: rgba(0, 0, 0, 0.02);
+  border-radius: 1px;
+  height: 100px;
+  left: 50%;
+  margin-left: -64px;
+  margin-top: -50px;
+  position: absolute;
+  top: 50%;
+  width: 128px;
+}
+
+.battery{
+    width: 60px;
+    height: 25px;
+    top: 35%;
+    border: 1px #2E2E2E solid;
+    border-radius: 2px;
+    position: relative;
+    -webkit-animation: charge 5s linear infinite;
+       -moz-animation: charge 5s linear infinite;
+            animation: charge 5s linear infinite;
+    margin: 0 auto;
+}
+
+.battery:after {
+  background-color: #2E2E2E;
+  border-radius: 0 1px 1px 0;
+  content: "";
+  height: 10px;
+  position: absolute;
+  right: -5px;
+  top: 7px;
+  width: 3px;
+}
+
+@-webkit-keyframes charge{
+    0%{box-shadow: inset 0px 0px 0px #2E2E2E;}
+    100%{box-shadow: inset 60px 0px 0px #2E2E2E;}
+}
+
+@-moz-keyframes charge{
+    0%{box-shadow: inset 0px 0px 0px #2E2E2E;}
+    100%{box-shadow: inset 60px 0px 0px #2E2E2E;}
+}
+
+@keyframes charge{
+    0%{box-shadow: inset 0px 0px 0px #2E2E2E;}
+    100%{box-shadow: inset 60px 0px 0px #2E2E2E;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .samdos{
     margin:15px 20px; transform:translateX(-300px); font-size: 20px; cursor: pointer;
 }.samdos-top{
@@ -48,20 +125,14 @@ option{
 
         /* Notice Board */
 .notice{
-    height: 450px; width: auto;
+    height: 350px; width: auto;
     background: rgb(161, 50, 10);
     border: 10px solid black;
     border-radius: 10px;
 }.notice>h3{
-    line-height: 40px;
+    line-height: 35px;
     text-align: left;
 }
-
-
-
-
-
-
 
 
   /*-- bottom-to-top --*/

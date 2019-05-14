@@ -8,14 +8,25 @@
             $(document).ready(function(){
                 setTimeout(function(){
                     $('#basicExampleModal123').modal('show');
-                }, 200);
+                }, 5000);
             });
 
+            jQuery(document).ready(function(){
+
+	            $("#preloader").fadeOut("slow");
+
+            });
        </script>
-       </head>
+</head>
 
 <body>
 
+        <div id="preloader">
+                <div class="loder-box">
+                    <div class="battery"></div>
+                </div>
+            </div>
+    <!-- <div class="loading"></div> -->
     <div id="wrapper">
 
 
@@ -155,7 +166,7 @@
                 </div>
                 <div class="modal-body">
                     <div class  ="notice container">
-                            <h3 id="text" class="white-text h2-responsive"></h3>
+                            <h3 id="text" class="white-text h5-responsive font-weight-bold"></h3>
                     </div>
                 </div>
 
@@ -172,8 +183,8 @@
         document.addEventListener('DOMContentLoaded', function (event) {
 
             var dataText = [
-                "Samdos is Recruiting Web Developers, Good Teacher accross all Departments who has the capability of Teaching Private and Public Classes in Their Tertiary Institutions. Send Email to sheygun@aol.com or follow DASHBOARD >> PROFILE >> MESSAGE US and send us message now ",
-                "Do you want to Become an Ambassador for Samdos in your department, why not send us message now and be among the successful Ambassadors. Send Email to sheygun@aol.com Now or follow DASHBOARD >> PROFILE >> MESSAGE US and send us message now",
+                "Samdos is Recruiting Web Developers, Good Teachers accross all Departments who has the capability of Teaching Private and Public Classes in Their Tertiary Institutions. Send an Email to sheygun@aol.com Now ",
+                "Do you want to Become an Ambassador for Samdos in your department, why not send us message now and be among the successful Ambassadors. Send an Email to sheygun@aol.com Now",
                 "Be among The first 20 people to get Space in our e-Multi Purpose Market by Contacting Us."
             ];
             function typeWriter(text, i, fnCallback) {
@@ -185,7 +196,7 @@
                     }, 150);
                 }
                 else if (typeof fnCallback == 'function') {
-                    setTimeout(fnCallback, 1000);
+                    setTimeout(fnCallback, 3000);
                 }
             }
             function StartTextAnimation(i) {
@@ -199,4 +210,12 @@
         });
     </script>
 
+    <!-- <script>
+    var body = document.getElementsByTagName('body')[0];
+    var removingLoading = function(){
+        setTimeout(function(){
+            body.className = body.className.replace(/loading/, '');
+        }, 3000);
+    }; removingLoading();
+</script> -->
 </html>
