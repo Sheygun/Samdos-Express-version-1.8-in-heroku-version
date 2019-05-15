@@ -61,6 +61,12 @@ router.get('/', (req, res) => res.render('index'))
   })
 
   router.post('/developer', Controller.postDev)
+
+  // ================== library ==========================
+  router.get('/newspaper', function(req, res) {
+    res.render('others/library/newspaper', { title: 'Express' })
+  })
+
 // ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
   // =============================== Computer Science ===========================

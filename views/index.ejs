@@ -8,51 +8,35 @@
             $(document).ready(function(){
                 setTimeout(function(){
                     $('#basicExampleModal123').modal('show');
-                }, 5000);
+                }, 10000);
             });
 
-            jQuery(document).ready(function(){
 
-	            $("#preloader").fadeOut("slow");
-
-            });
        </script>
 </head>
 
 <body>
-
-        <div id="preloader">
-                <div class="loder-box">
-                    <div class="battery"></div>
-                </div>
-            </div>
-    <!-- <div class="loading"></div> -->
     <div id="wrapper">
-
-
             <%- include partial/dashboard %>
     <!-- ======================================================== main page ===================================================================== -->
-
-
         <div id="page-wrapper">
 
             <div class="container-fluid">
 
-                <div class="row">
+                <!-- <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">
-                            Dashboard <small> Overview</small>
+                        <h1 class="page-header text-center font-weight-bold p-5 h3-responsive wow zoomIn" style="color: rgb(234, 28, 80);" data-wow-delay="0.5s" data-wow-duration="4s" data-wow-iteration="1">
+                            WELCOME HOME, OUR SPECIAL QUEST!
                         </h1>
                     </div>
+                </div> -->
+
+                <div>
+                    <h1 class="h1-responsive text-center font-weight-bold p-5">WHAT WE DO</h1>
                 </div>
-
-                <%- include partial/extra %>
-
-
-
                 <div class="row">
 
-                        <div class="col-md-4">
+                        <div class="col-md-4 mb-3">
                                 <div class="card">
                                     <img class="card-img-top img-fluid " src="stylesheets/images/hand.jpg" alt="Card image cap">
                                     <div class="card-body" style="margin: 5px 5px;">
@@ -63,85 +47,107 @@
                                 </div>
                         </div>
 
-                        <div class="col-md-4">
+                        <div class="col-md-4 my-3">
                                 <div class="card">
+                                        <img class="card-img-top img-fluid" src="stylesheets/images/about1.jpg"  alt="Card image cap">
+                                        <div class="card-body" style="margin: 5px 5px;">
+                                            <h4 class="card-title text-center h3"><a>e-Market System</a></h4>
+                                            <p class="card-text text-center" style="font-size: 15px;">We extend our Market System across the world. We develop world recommended e-Multi-purpose Market where buying and selling becomes the easiest things to do. </p> <br>
+                                            <!-- <a href="#" class="btn btn-primary">Button</a> -->
+                                            </div>
+
+                                </div>
+                        </div>
+
+                        <div class="col-md-4 my-3">
+                            <div class="card">
+                                <img class="card-img-top img-fluid" src="stylesheets/images/bl2.jpg"  alt="Card image cap">
+                                <div class="card-body" style="margin: 5px 5px;">
+                                    <h4 class="card-title text-center h3"><a>Workshop</a></h4>
+                                    <p class="card-text text-center" style="font-size: 15px;">Where you meets professionals accross all field to Teach, Mentor, Direct and put you Through. We develop Leaders all over the world.</p> <br>
+                                    <!-- <a href="#" class="btn btn-primary">Button</a> -->
+                                    </div>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="row my-5">
+
+                    <div class="col-md-4">
+                        <div class="card">
+                                <img class="card-img-top img-fluid" src="stylesheets/images/b1.jpg"  alt="Card image cap">
+                                <div class="card-body" style="margin: 5px 5px;">
+                                    <h4 class="card-title text-center h3"><a>e-Library</a></h4>
+                                    <p class="card-text text-center" style="font-size: 15px;">Being the best of it type, we create a world where everybody develops reading ability and culture to enhance academic literacy. Our Special Guests can also access All-in-One Newspaper, Poems, Stories, Novels and the likes. </p> <br>
+                                    <!-- <a href="#" class="btn btn-primary">Button</a> -->
+                                    </div>
+                        </div>
+                </div>
+
+                <div class="col-md-4">
+                        <div class="card">
+                                <img class="card-img-top img-fluid" src="stylesheets/images/slide.jpg"  alt="Card image cap">
+                                <div class="card-body" style="margin: 5px 5px;">
+                                    <h4 class="card-title text-center h3"><a>Event Center</a></h4>
+                                    <p class="card-text text-center" style="font-size: 15px;">We provide recent and valid events in Town, for you to develop your mentality and to Meet new Friends across the world</p> <br>
+                                    <!-- <a href="#" class="btn btn-primary">Button</a> -->
+                                    </div>
+
+                        </div>
+                </div>
+
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img class="card-img-top img-fluid" src="stylesheets/images/ab2.jpg"  alt="Card image cap">
+                                <div class="card-body" style="margin: 5px 5px;">
+                                    <h4 class="card-title text-center h3"><a>Saintly Scholars</a></h4>
+                                    <p class="card-text text-center" style="font-size: 15px;">We develop internal and external relationship among incoming and outgoing Students. We provide necessary materials across all Levels and Departments in their various Tertiary Institutions </p> <br>
+                                    <!-- <a href="#" class="btn btn-primary">Button</a> -->
+                                    </div>
+                            </div>
+                    </div>
+                </div>
+
+                  <div>
+                    <h1 class="h1-responsive text-center font-weight-bold p-5">WHAT WE POSSESS</h1>
+                </div>
+                <div class="row my-5">
+
+                        <div class="col-md-4">
+                            <div class="card">
+                                    <img class="card-img-top img-fluid" src="stylesheets/images/2.jpg"  alt="Card image cap">
+                                    <div class="card-body" style="margin: 5px 5px;">
+                                        <h4 class="card-title text-center h3"><a>Efficiency</a></h4>
+                                        <p class="card-text text-center" style="font-size: 15px;">We are highly exceptional and extraordinary everyday. Accuracy and Effectiveness being our watchword makes us stand out </p> <br>
+                                        <!-- <a href="#" class="btn btn-primary">Button</a> -->
+                                        </div>
+                            </div>
+                    </div>
+
+                    <div class="col-md-4">
+                            <div class="card">
                                     <img class="card-img-top img-fluid" src="stylesheets/images/5.jpg"  alt="Card image cap">
                                     <div class="card-body" style="margin: 5px 5px;">
                                         <h4 class="card-title text-center h3"><a>Recommendation</a></h4>
                                         <p class="card-text text-center" style="font-size: 15px;">We move everywhere to create a sophisticated and exceptional relationship with outstanding tools, which makes us the best.</p> <br>
                                         <!-- <a href="#" class="btn btn-primary">Button</a> -->
                                         </div>
-                                </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="card">
-                                <img class="card-img-top img-fluid" src="stylesheets/images/1.jpg"  alt="Card image cap">
-                                <div class="card-body" style="margin: 5px 5px;">
-                                    <h4 class="card-title text-center h3"><a>Determination</a></h4>
-                                    <p class="card-text text-center" style="font-size: 15px;">We excel in all criteria related to any form of technology, we are deterministic in nature</p> <br>
-                                    <!-- <a href="#" class="btn btn-primary">Button</a> -->
-                                    </div>
                             </div>
                     </div>
-                </div>
 
-                <div class="row">
-
-                    <div class="col-md-4">
-                        <div class="card">
-                            <img class="card-img-top img-fluid" src="stylesheets/images/2.jpg"  alt="Card image cap">
-                            <div class="card-body" style="margin: 5px 5px;">
-                                <h4 class="card-title text-center h3"><a>Efficiency</a></h4>
-                                <p class="card-text text-center" style="font-size: 15px;">Highly exceptional and extraordinary everyday, accuracy and effectiveness being our watchword makes us stand out </p> <br>
-                                <!-- <a href="#" class="btn btn-primary">Button</a> -->
+                            <div class="col-md-4">
+                                <div class="card">
+                                        <img class="card-img-top img-fluid" src="stylesheets/images/4.jpg"  alt="Card image cap">
+                                        <div class="card-body" style="margin: 5px 5px;">
+                                            <h4 class="card-title text-center h3"><a>Togetherness</a></h4>
+                                            <p class="card-text text-center" style="font-size: 15px;">We are undefeatable, together we create a new world, we believe in team work. Our bonds are unbreakable </p> <br>
+                                            <!-- <a href="#" class="btn btn-primary">Button</a> -->
+                                            </div>
                                 </div>
                         </div>
-                </div>
-
-                <div class="col-md-4">
-                        <div class="card">
-                            <img class="card-img-top img-fluid" src="stylesheets/images/4.jpg"  alt="Card image cap">
-                            <div class="card-body" style="margin: 5px 5px;">
-                                <h4 class="card-title text-center h3"><a>Togetherness</a></h4>
-                                <p class="card-text text-center" style="font-size: 15px;">We are undefeatable, together we create a new world, we believe in team work. Our bonds are unbreakable </p> <br>
-                                <!-- <a href="#" class="btn btn-primary">Button</a> -->
-                                </div>
-                        </div>
-                </div>
-
-                        <div class="col-md-4">
-                            <div class="card">
-                                <img class="card-img-top img-fluid" src="stylesheets/images/10.jpg"  alt="Card image cap">
-                                <div class="card-body" style="margin: 5px 5px;">
-                                    <h4 class="card-title text-center h3"><a>Innovation</a></h4>
-                                    <p class="card-text text-center" style="font-size: 15px;">We find a way than to fade away, we develop ideas and build on them to rule the world, beating the best becomes our passion. </p> <br>
-                                    <!-- <a href="#" class="btn btn-primary">Button</a> -->
-                                    </div>
-                            </div>
                     </div>
-                </div>
-
                 <%- include partial/advert  %>
-                <div class="row" style="margin: 40px 0px;">
-                    <div class="col-md-12">
 
-                        <h1 class="h3-responsive red-text text-center">See Latest Updates and Posts</h1>
-
-                        <table class="table text-center white table-hover" style="border-radius: 10px;" data-wow-duration="3s">
-                            <tbody class="">
-                                  <!-- ================================ recent news here ====================================== -->
-                                  <tr>
-                                    <td class="h5" onclick="window.location.replace('/test260219')" style="width: 70%; cursor: pointer;"><a>See Functional Programming CSC322 Test Questions and Answers Here</a> <h6 class="small text-muted"> posted 26/02/2019 04:30:46 PM</h6> </td>
-                                  </tr>
-                              <tr>
-                                  <td class="h5" onclick="window.location.replace('https://drive.google.com/open?id=1aHuu6jz5eL3ftIl9RVROfp4N1F3T4Crc')" style="width: 70%; cursor: pointer;">Download MAT332 Numerical Analysis PDF Material here ... <h6 class="small text-muted"> posted 12/02/2019 11:02:56 PM</h6></td>
-                              </tr>
-                            </tbody>
-                          </table>
-
-                    </div>
-                </div>
 
 
 
@@ -179,43 +185,5 @@
 
 <%- include partial/script %>
 
-<script>
-        document.addEventListener('DOMContentLoaded', function (event) {
 
-            var dataText = [
-                "Samdos is Recruiting Web Developers, Good Teachers accross all Departments who has the capability of Teaching Private and Public Classes in Their Tertiary Institutions. Send an Email to sheygun@aol.com Now ",
-                "Do you want to Become an Ambassador for Samdos in your department, why not send us message now and be among the successful Ambassadors. Send an Email to sheygun@aol.com Now",
-                "Be among The first 20 people to get Space in our e-Multi Purpose Market by Contacting Us."
-            ];
-            function typeWriter(text, i, fnCallback) {
-                if (i < (text.length)) {
-                    document.getElementById("text").innerHTML = text.substring(0, i + 1) +
-                        '<span aria-hidden="true" class="banner_text_w3ls"></span>';
-                    setTimeout(function () {
-                        typeWriter(text, i + 1, fnCallback)
-                    }, 150);
-                }
-                else if (typeof fnCallback == 'function') {
-                    setTimeout(fnCallback, 3000);
-                }
-            }
-            function StartTextAnimation(i) {
-                if (i < dataText[i].length) {
-                    typeWriter(dataText[i], 0, function () {
-                        StartTextAnimation(i + 1);
-                    });
-                }
-            }
-            StartTextAnimation(0);
-        });
-    </script>
-
-    <!-- <script>
-    var body = document.getElementsByTagName('body')[0];
-    var removingLoading = function(){
-        setTimeout(function(){
-            body.className = body.className.replace(/loading/, '');
-        }, 3000);
-    }; removingLoading();
-</script> -->
 </html>
