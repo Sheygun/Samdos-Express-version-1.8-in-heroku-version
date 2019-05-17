@@ -67,6 +67,19 @@ router.get('/', (req, res) => res.render('index'))
     res.render('others/library/newspaper', { title: 'Express' })
   })
 
+  router.get('/journal', function(req, res) {
+    res.render('others/library/journal', { title: 'Express' })
+  })
+
+  router.get('/story', function(req, res) {
+    res.render('others/library/story', { title: 'Express' })
+  })
+
+
+  router.get('/novel', function(req, res) {
+    res.render('others/library/novel', { title: 'Express' })
+  })
+
 // ]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]
 
   // =============================== Computer Science ===========================
